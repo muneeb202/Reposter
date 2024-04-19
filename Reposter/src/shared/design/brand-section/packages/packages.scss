@@ -1,0 +1,167 @@
+.flex-container-packages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+  
+}
+
+.col-6-packages {
+    flex: 0 1 15%;
+}
+
+.col-8-packages {
+    flex: 0 1 65%;
+    margin-top: 5px;
+}
+
+.packages {
+    border: 2px solid #770cf1;
+    border-radius: 10px;
+    width: 58%;
+    height: 60px;
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.growth {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #770cf1;
+    padding: 10px;
+}
+
+.price-growth {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.h3-heading {
+    color: #474747;
+    font-size: 12px;
+    width: 110px;
+}
+
+.price-tag {
+    color: #770cf1;
+    padding: 30px 125px;
+
+}
+
+.pricing-section {
+    border: 2px solid #770cf1;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
+    position: relative;
+    height: auto;
+
+}
+
+.heading-growth {
+    text-align: center;
+    color: #770cf1;
+}
+
+.btn-buy-now-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-buy-now {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 100px;
+}
+
+.show-packaages {
+    display: flex;
+    margin-top: 5px;
+}
+
+.package-benefit {
+    color: #474747;
+    font-size: 14px;
+}
+.package-benefit-section {
+    display: flex;
+    margin: 3px 10px;
+    gap: 7px;
+}
+
+.green-tick-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pricing-section-container {
+    display: flex;
+    gap: 15px;
+}
+
+.price-growth-package {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+.heading-growth-p {
+    text-align: center;
+    color: #770cf1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-8-packages {
+        flex: 0 0 100%;
+    }
+
+    .pricing-section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-section {
+        width: 90%;
+    }
+    .responsive-h-r {
+        text-align: center;
+    }
+
+    .show-packaages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packages{
+        width: 97%;
+    }
+
+    .price-tag{
+        padding: 10px 0;
+    }
+
+    .col-6-packages {
+        flex: 0 1 100%;
+        margin-top: 10px;
+    }
+}

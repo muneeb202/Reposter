@@ -1,0 +1,130 @@
+.flex-container-admin {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.col-6-admin {
+    flex: 0 0 15%;
+    padding: 10px;
+    // margin: 10px 0 10px 50px;
+}
+
+.col-8-admin {
+    flex: 0 0 65%;
+    padding: 10px;
+}
+
+.creator-reposter-dashboard-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    margin: 25px;
+    cursor: pointer;
+
+}
+
+.cr-list-dashboard {
+    border: 3px solid #770cf1;
+    border-radius: 30px;
+    width: 300px;
+}
+
+.cr-data-list-dashboard {
+    display: flex;
+    margin: 20px;
+    // flex-direction: column;
+}
+
+.cr-data-dashboard {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.cr-state-dashboard {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    margin: 13px;
+    width: 100%;
+}
+
+.creator-income-p {
+    color: black;
+    font-size: 11px;
+    margin: 0 10px;
+}
+
+.hire-list {
+    display: flex;
+    width: 40%;
+}
+
+.view-project-btn {
+    background-color: #770cf1;
+    border-radius: 4px;
+    width: 130px;
+    color: #ffff !important;
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+
+}
+
+.view-project-btn-div {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+
+}
+
+.main-hire-list-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.creator-reposter-img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .resposnsive-h-d {
+        text-align: center;
+    }
+
+
+    .view-project-btn-div {
+        width: 100%;
+    }
+
+    .col-8-admin {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .col-6-admin {
+        flex: 0 0 100%;
+        margin-top: 10px;
+        // margin: 10px 0 10px 50px;
+    }
+
+    .main-hire-list-container {
+        display: block;
+    }
+
+    .cr-list-dashboard {
+        width: 100%;
+    }
+
+    .hire-list {
+        width: 100%;
+    }
+
+}

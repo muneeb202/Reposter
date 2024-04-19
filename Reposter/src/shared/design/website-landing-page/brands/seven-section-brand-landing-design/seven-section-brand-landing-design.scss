@@ -1,0 +1,77 @@
+.our-integration-heading-brand-sev{
+    color: rgb(19,20,70);
+    font-size:32px;
+    font-weight: 900;
+    font-family: Helvetica, sans-serif;
+    line-height: 32.5px;
+    width: 615px;
+    text-align: center;
+    padding-top: 75px;
+}
+.our-integration-heading-brand-sevh3{
+    color: #717275;
+    font-size:20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 32.5px;
+    width: 1000px;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.get-started-fifth-creation-div{
+    margin-bottom: 60px !important;
+}
+@media only screen and (max-width: 768px) {
+    .last-section-brand-container {
+        flex-direction: column;
+    }
+
+    .custom-main-heading-interactive {
+        width: 450px;
+        font-size: 35px;
+    }
+
+    .our-integration-heading-brand-sev{
+        width: auto;
+
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-container-brand {
+        padding: 0 15px;
+    }
+
+    .custom-main-heading-interactive {
+        width: 270px;
+        font-size: 20px;
+    }
+
+  
+
+    .brand-landing-page-video-btn {
+        padding: 5px !important;
+        width: 105px;
+        font-size: 0.5rem !important;
+        margin: 5px 65px !important;
+    }
+
+    .our-integration-heading-brand-sev{
+        width: auto;
+        font-size: 30px;
+    }
+}
+
+.show-social-media-icons-list {
+    transition: all 0.8s ease; /* Increased duration to 0.8s for all properties */
+    border-radius: 5px !important;
+}
+// .show-social-media-icons-list:hover {
+//     transform: scale(1.1) ease; /* Just an example of transformation */
+// }
+
+h3{
+    font-family: 'Inter', sans-serif;
+
+}

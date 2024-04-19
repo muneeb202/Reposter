@@ -1,0 +1,138 @@
+.flex-container-payment-detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.ongoing-payment {
+    display: flex;
+    gap: 10px;
+    margin: 3px;
+}
+
+
+.col-6-payment-detail {
+    flex: 0 0 15%;
+}
+
+.col-8-payment-detail {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.main-on-going-payment-detail {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.ongoing-payment-detail {
+    background: #fff;
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    height: auto;
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+}
+
+.w-flex-payment-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    width: 100%;
+}
+
+.ongoing-withdraw {
+    // display: flex;
+    // gap: 10px;
+    margin-top: 10px;
+}
+
+.ongoing-withdraw-detail {
+    background: #fff;
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    height: auto;
+    margin-top: 10px;
+    width: 65%;
+    display: flex;
+}
+
+.w-flex-withdraw-detail {
+    margin: 20px;
+
+}
+
+.current-account-detail {
+    color: #141414B2;
+    margin-top: 10px;
+
+}
+
+.ongoing-withdraw-d-flex {
+    display: flex;
+    gap: 35px;
+}
+
+.btn-add-bank {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    justify-content: center;
+    margin-top: 10px;
+    width: 215px;
+    align-items: center;
+    height: 175px;
+    // flex-direction: column-reverse;
+}
+
+.addbank-div {
+    align-items: center;
+    display: flex;
+
+}
+
+.add-bank-d{
+    height: 225px;
+}
+
+.add-new-bank-title{
+    color: #474747;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .col-8-payment-detail {
+        flex: 0 0 100%;
+    }
+
+    .main-on-going-payment-detail {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ongoing-withdraw-d-flex {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ongoing-withdraw-detail{
+        width: 80%;
+    }
+
+    .btn-add-bank-pament{
+        width: 275px;
+    }
+
+    .col-6-payment-detail {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+}

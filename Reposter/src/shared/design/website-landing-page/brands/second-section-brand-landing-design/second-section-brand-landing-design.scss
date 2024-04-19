@@ -1,0 +1,198 @@
+.second-section-brand-landing-page {
+    margin: 20px;
+    min-height: 515px; /* Changed to min-height for better responsiveness */
+}
+
+.card-container-list {
+    background: linear-gradient(180deg, #FFFEFF 0%, #E087F8 50%, #6D29F0 100%) !important;
+    width: 325px;
+    border-radius: 15px; /* Moved from hover to apply by default */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px; /* Moved from hover to apply by default */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for transform and box-shadow */
+}
+
+
+.card-container-list:hover {
+    background: #f2532b !important;
+    margin-bottom: 10px !important;
+    border-radius: 15px !important;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 0px 24px; /* Shadow effect on hover with offset on all sides */
+}
+
+.headingSecond{
+    color: rgb(19, 20, 70) !important;
+    font-size: 30px !important;
+    font-style: normal !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 100;
+    padding-top: 80px;
+}
+
+.card-container-img {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+.card-container-content {
+    display: flex;
+    justify-content: center
+}
+
+.custom-achived-container {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-achived-main-heading {
+    font-family: Poppins;
+    font-weight: bold;
+    width: 775px;
+    text-align: center;
+    color: #616161;
+    font-size: 37px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.card-container-brand {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+
+}
+
+.heading-of-img {
+    display: inline-block;
+    padding-left: 5px;
+    color: #FE9121;
+}
+
+
+.card-img {
+    width: 95% !important;
+    margin-top: 15px;
+}
+
+
+.fade-in-section {
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+    transition: opacity 1800ms ease-out, transform 1800ms ease-out,
+        visibility 1800ms ease-out;
+    /* Increased duration for a smoother and slower transition */
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+.show-text-state-brand-card {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    
+}
+
+.card-main-img-brand {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    margin-top: 10px;
+    /* padding: 13px; */
+    // // border-radius: 15px;
+    opacity: 1; /* Start with zero opacity */
+    transition: opacity 1s ease, box-shadow 0.2s ease; 
+}
+// .card-main-img-brand:hover {
+//     opacity: 1; /* Fade in when hovered */
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+// }
+
+.brand-state-cards {
+    opacity: 1;
+    transition: opacity 0.3s, box-shadow 0.2s; /* Added transition for opacity and box-shadow */
+    // box-shadow: rgba(89, 91, 92, 0.2) 0px 0px 24px; /* Initial shadow with offset on all sides */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+} 
+
+.brand-state-cards:hover {
+    opacity: 1; /* Reduce opacity on hover */
+    box-shadow: rgba(62, 63, 65, 0.4) 0px 0px 24px !important; /* Shadow effect on hover with offset on all sides */
+}
+
+
+.card-state-container-brand {
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+    max-width: 100%;
+    margin-inline: auto;
+//     opacity: 1; /* Start with zero opacity */
+//   transition: opacity 0.5s ease, box-shadow 0.5s ease; 
+}
+    // .card-state-container-brand:hover {
+    //     opacity: 1; /* Fade in when hovered */
+    //     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);  
+    // }
+
+
+.divider-card-info {
+    margin: 10px 0;
+    border-color: #6D29F0;
+}
+
+
+.state-num-brand-c {
+    font-weight: bold !important;
+    color: #616161 !important;
+}
+
+.arrow-icons-footer-brand {
+    cursor: pointer;
+    padding-top: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-container-brand {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 15px;
+    }
+}   
+
+@media only screen and (max-width: 480px) {
+    .second-section-brand-landing-page {
+        margin: 10px; /* Adjusted margin for smaller screens */
+        min-height: auto; /* Adjusted height for smaller screens */
+    }
+
+    .card-container-brand {
+        overflow-x: hidden;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-line {
+        display: none; /* Hide carousel line on smaller screens */
+    }
+
+    .card-state-container-brand {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h2{
+    font-family: 'Inter', sans-serif;
+}

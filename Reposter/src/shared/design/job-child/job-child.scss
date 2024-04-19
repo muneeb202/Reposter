@@ -1,0 +1,126 @@
+.jobs-list {
+    border: 2px solid #770cf1;
+    border-radius: 10px;
+    margin-top: 7px;
+    cursor: pointer;
+    width: 325px;
+}
+
+.jobs {
+    display: flex;
+    margin: 10px 10px;
+}
+
+
+.pro-img {
+    width: 49px;
+    height: 49px;
+}
+
+.job-title {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.job-data-desc {
+    color: #6C6C6C;
+    padding-left: 10px;
+    font-size: 11px;
+}
+
+.job-tag-list {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.job-tag {
+    background: #EFEFEF;
+    width: 57px;
+    height: 25px;
+    color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+}
+
+.project-verified-section {
+    display: flex;
+}
+
+.verified-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.project-verify-tag {
+    padding-left: 5px;
+    width: 79px;
+
+}
+
+.proposal-count {
+    padding: 0 10px;
+    color: #838383;
+    // width: 90px;
+    font-size: 10px;
+}
+
+
+.jobs-list:hover {
+    background: #770cf1;
+}
+
+
+
+.jobs-list:hover .job-title {
+    color: #ffff !important;
+}
+
+
+.jobs-list:hover .job-data-desc {
+    color: #fff;
+}
+
+.jobs-list:hover .project-verified-section {
+    color: #fff;
+}
+
+.jobs-list:hover .proposal-count {
+    color: #fff;
+}
+
+.job-tag-list-r {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.applicaint-job-rating {
+    font-size: 16px !important;
+    padding-left: 10px !important;
+}
+
+.main-job-heading{
+    margin-bottom: 27px;
+}
+
+@media (max-width: 768px) {
+    .main-jobs-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jobs-list {
+        width: auto;
+
+    }
+
+    .main-job-heading{
+        text-align: center;
+    }
+}

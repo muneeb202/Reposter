@@ -1,0 +1,91 @@
+.our-integration-heading-brand {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32.5px;
+    width: 615px;
+    text-align: center;
+    padding-top: 75px;
+   
+
+
+}
+
+.background-vector-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 75%;
+    margin-inline: auto;
+    object-fit: contain;
+}
+
+.brand-our-integration-heading-brand{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(19,20,70);
+    font-weight: 900;
+    font-family: Helvetica, sans-serif;
+}
+.brand-our-integration--child-heading-brand{
+    margin: 10px 195px;
+    width: 50%;
+    font-size: 15px;
+    color: #292330;
+    font-family: Helvetica, sans-serif;
+    font-size:15px;
+
+}
+
+.show-text-eight-section-container{
+    padding: 45px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .last-section-brand-container {
+        flex-direction: column;
+    }
+
+    .custom-main-heading-interactive {
+        width: 450px;
+        font-size: 35px;
+    }
+
+
+    .background-vector-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-container-brand {
+        padding: 0 15px;
+    }
+
+    .custom-main-heading-interactive {
+        width: 270px;
+        font-size: 20px;
+    }
+
+
+    .brand-landing-page-video-btn {
+        padding: 5px !important;
+        width: 105px;
+        font-size: 0.5rem !important;
+        margin: 5px 65px !important;
+    }
+
+    .brand-our-integration-heading-brand{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .background-vector-img {
+        background-image: none !important;
+    }
+
+    .brand-our-integration--child-heading-brand {
+        margin: 9px 30px;
+        width: 100%;
+        font-size: 11px;
+    }
+    
+}

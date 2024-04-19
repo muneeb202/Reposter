@@ -1,0 +1,129 @@
+.flex-container-request-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.col-6-request-form {
+    flex: 0 0 15%;
+}
+
+.col-8-request-form {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.upload-form-data {
+    width: 100%;
+    // justify-content: center;
+    display: flex;
+    // gap: 30px;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.upload-form-input {
+    width: 75%;
+    // height: 75px;
+}
+
+.text-field-design-input {
+    border: 2px solid #770CF1;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+}
+
+.text-field-design-input-description {
+    border: 2px solid #770CF1;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.btn-upload-file-request-form {
+    border: 2px solid #770cf1;
+    border-radius: 5px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    flex-direction: column-reverse;
+}
+
+.upload-and-select-img {
+    display: flex;
+    margin: 10px 5px;
+}
+
+.selected-img-request-form {
+    border: 2px solid #DBDBDB;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    // margin: 0 20px;
+    gap: 10px;
+}
+
+.current-selected-img {
+    margin: 10px;
+}
+
+.current-empty-img {
+    width: 55px;
+    height: 55px;
+}
+
+.submit-div {
+    display: flex;
+    width: 76%;
+    justify-content: end;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .col-8-request-form {
+        flex: 0 0 100%;
+    }
+
+    .upload-form-data {
+        align-items: center;
+    }
+
+
+
+    .submit-div {
+        width: 75%;
+        justify-content: center;
+    }
+
+    .current-selected-img {
+        width: 40px;
+        height: 40px;
+    }
+    .current-empty-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .upload-and-select-img{
+        width: 75%;
+    }
+
+    .selected-img-request-form {
+        gap: 5px;
+    }
+    
+    .col-6-request-form {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+}

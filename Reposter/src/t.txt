@@ -1,0 +1,173 @@
+.show-state-img {
+    object-fit: contain;
+    width: 110%;
+    background-color: #c2f1d9;
+    border-radius: 15px 15px 0 0; /* Top-left and top-right corners are rounded */
+    height: 500px;
+
+}
+
+ background: linear-gradient(to bottom, #e0f9ec 88%, transparent 100%);
+    width: 95%;
+    border-radius: 20px;
+    margin-inline: auto;
+    align-items: center;
+
+import React, { useState, useEffect, useRef } from 'react'
+import * as materialModules from "@/shared/modules/material";
+import "./fifth-section-brand-landing-design.scss"
+import totalStateImg from "@/assets/total-state-img.png";
+import socialMediaStateImg from "@/assets/video-thumbnail.png";
+
+const FifthSectionBrandLandingDesign = () => {
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.querySelector('.sixth-section-brand-landing-page-track-revenue');
+            if (!element) return;
+
+            const elementPosition = element.getBoundingClientRect().top;
+
+            if (elementPosition < window.innerHeight) {
+                setIsVisible(true);
+                window.removeEventListener('scroll', handleScroll);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); 
+    return (
+        <section className={`sixth-section-brand-landing-page-track-revenue ${isVisible ? 'visible' : ''}`}>
+            <div className="main-div-section-fourth-container-brand">
+                <div className='sixth-section-text-part-container'>
+                    <div className={`fourth-section-brand-landing-page-streamline ${isVisible ? 'visible' : ''}`}>
+                        <h2 className="section-main-heading-brand">Interactive demo and Short Clip Here</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                            culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div className='sixth-section-text-part-container'>
+                            {textListTwo.map((text) => {
+                                return (
+                                    <>
+                                        <div>
+                                            <p className='second-side-child-description-brand'>{text}</p>
+                                        </div>
+                                        <hr className="hr-section-f-brand" />
+                                    </>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div className='div1'>
+                <div className='second-part-of-brand-sixth-img'>
+                    <img src={socialMediaStateImg} alt="" className='show-state-img-second' />
+
+                </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default FifthSectionBrandLandingDesign
+
+export default SixthSectionBrandLandingDesign
+
+.section-main-heading-brand{
+    color: rgb(19, 20, 77);
+    font-size:2.7rem;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+// background-color: #2b045a;
+
+
+}
+.div1{
+    background-color: #F4BBC9;
+    border-radius: 10px;
+    border-radius: 15px 15px 0 0; /* Top-left and top-right corners are rounded */
+
+}
+.second-part-of-brand-sixth-img {
+    // width: 100%;
+    object-fit: contain;
+    // width: 110%;
+    // background-color: #c2f1d9;
+    border-radius: 15px 15px 0 0; /* Top-left and top-right corners are rounded */
+    height: 500px;
+}
+
+.show-state-img-second {
+    width: 100%;
+}
+
+.sixth-section-text-part-container {
+    width: 50%;
+}
+
+.sixth-section-brand-landing-page-track-revenue {
+    margin-top: 5%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Further decreased duration to 0.3s */
+    background-color: #FFE6EE;
+    width: 95%;
+    margin-inline: auto;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #FFE6EE 88%, transparent 100%);
+
+}
+
+.sixth-section-brand-landing-page-track-revenue.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s; /* Adjusted delay to match the duration */
+}
+
+
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {
+
+    .main-landing-page-container {
+        overflow-x: auto;
+    }
+
+    .card-brand-landing {
+        width: 345px;
+        padding: 10px 6px;
+        border: 2px solid #F09639;
+        height: 120px;
+
+    }
+
+    .card-title-b {
+        text-align: center !important;
+        font-size: 12px;
+
+    }
+
+    .card-description-b {
+        margin-top: 5px !important;
+        font-weight: 700;
+        font-size: 0.7rem !important;
+    }
+
+    .back-arrow-icon {
+        display: none !important;
+    }
+
+    .forward-arrow-icon {
+        display: none !important;
+    }
+}

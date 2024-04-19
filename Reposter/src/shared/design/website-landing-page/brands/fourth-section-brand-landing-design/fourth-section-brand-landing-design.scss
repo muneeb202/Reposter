@@ -1,0 +1,111 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 94%;
+  margin-left: 3%;
+  background-color: rgb(228, 250, 250); /* Background color without !important */
+}
+
+.section0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  background-color: rgb(228, 250, 250); /* Background color without !important */
+}
+
+.item1 {
+
+  color: rgb(19, 20, 70);
+  font-size: 1.3rem;
+  font-weight: 600;
+  // font-family: 'Inter', sans-serif;
+}
+h2{
+  font-family: 'Inter', sans-serif;
+
+}
+.paragraphs {
+  margin-top: 5%;
+  padding-left: 1%;
+}
+
+.paragraphs p {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  color: rgb(9, 5, 75);
+  font-weight: 500;
+  font-size: 18px;
+  // font-family: 'Inter', sans-serif;
+  
+}
+
+.item2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.image-container2 {
+  background-color: #c8f3f3;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.image {
+  max-width: 100%; /* Adjusted for responsiveness */
+  max-height: 100%; /* Adjusted for responsiveness */
+  border-radius: 8px;
+}
+
+.section.animate-section {
+  /* Add your animation properties here */
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .section {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .section0 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .item1 {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .item2 {
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}

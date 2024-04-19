@@ -1,0 +1,203 @@
+// .flex-container-transaction-history {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     flex-direction: row;
+//     margin: 35px;
+//     width: 100%;
+// }
+
+// .col-6-transaction-history {
+//     flex: 0 0 25%;
+//     padding: 10px;
+// }
+
+// .col-8-transaction-history {
+//     flex: 0 0 60%;
+//     padding: 0 0 0 150px;
+// }
+
+// .transaction-history-income {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     width: 350px;
+//     flex-direction: column;
+// }
+
+// .tab-img {
+//     width: 500px;
+//     height: 75px;
+// }
+
+// .graph-img {
+//     width: 500px;
+//     height: 150px;
+// }
+// .container-trans {
+//     display: flex;
+//     width: 100%;
+//     flex-wrap: wrap;
+//     gap: 10px;
+// }
+
+// .btn-add-new-bank{
+//     margin-top: 10px;
+//     border: 2px solid #770cf1;
+//     border-radius: 15px;
+//     width: 150px;
+//     height: 96px;
+//     align-items: center;
+//     justify-content: center;
+//     display: flex;
+// }
+
+//resuable code
+// .form-data-job-posting {
+//     justify-content: center;
+//     display: flex;
+//     gap: 20px;
+//     flex-direction: column;
+//     margin-top: 10px;
+// }
+
+// .view-all-project-btn {
+//     background-color: #770cf1;
+//     border-radius: 4px;
+//     width: 150px;
+//     color: white !important;
+//     font-size: 14px !important;
+//     text-transform: capitalize !important;
+// }
+
+// .on-going-projects {
+//     margin-top: 10px;
+// }
+
+// .on-going-project-heading {
+//     color: #474747;
+// }
+
+// .on-going-projects-list-two {
+//     background: #fff;
+//     border: 2px solid #770cf1;
+//     border-radius: 5px;
+//     width: 420px;
+//     height: 150px;
+//     margin-top: 10px;
+// }
+
+
+/// end resuable code
+
+.flex-container-transaction-history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 35px;
+}
+
+.col-6-transaction-history {
+    flex: 0 0 48%;
+    /* Adjust as needed */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-8-transaction-history {
+    flex: 0 0 48%;
+    /* Adjust as needed */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.transaction-history-income {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 250px;
+    flex-direction: column;
+}
+
+.tab-img {
+    width: 500px;
+    height: 75px;
+}
+
+.graph-img {
+    width: 500px;
+    height: 150px;
+}
+
+.container-trans {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.container-trans-tran {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-add-new-bank {
+    margin-top: 10px;
+    border: 2px solid #770cf1;
+    border-radius: 15px;
+    width: 150px;
+    height: 96px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.on-going-projects-list-two-transcation-history {
+    background: #fff;
+    border: 2px solid #770cf1;
+    border-radius: 5px;
+    width: 495px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.on-going-projects-transition {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .flex-container-transaction-history {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-6-transaction-history,
+    .col-8-transaction-history {
+        flex: 1 1 100%;
+        padding: 0 10px;
+    }
+
+    .on-going-projects-transition {
+        margin-top: 10px;
+    }
+
+    .btn-add-new-bank {
+        width: 190px;
+      
+    }
+
+    .container-trans-tran {
+        justify-content: center;
+        width: 100% !important;;
+    }
+
+    .project-heading-r{
+        text-align: start;
+    }
+}

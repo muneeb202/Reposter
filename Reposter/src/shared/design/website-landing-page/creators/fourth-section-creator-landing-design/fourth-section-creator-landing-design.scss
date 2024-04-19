@@ -1,0 +1,133 @@
+.main-div-section-fourth-container{
+    padding: 80px 55px;
+    display: flex;
+}
+.multiple-img-container{
+    width: 50%;
+}
+
+.m1-img{
+    width: 150px;
+    object-fit: contain;
+}
+
+.m2-img{
+    width: 175px;
+    object-fit: contain;
+
+}
+.m3-img{
+    width: 235px;
+    object-fit: contain;
+
+}
+
+
+.fourt-second-side-main-heading{
+    width: 100%;
+    line-height: 38.4px;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.fourt-second-side-child-heading{
+    font-size: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+
+}
+
+.add-padding-t{
+    padding-top: 15px;
+}
+
+.fourt-second-side-child-description{
+    padding-top: 5px;
+    width: 500px;
+    color: #6c757d;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+
+.hr-section-f{
+    margin-top: 10px;
+}
+
+.container-text-fouuth-creator-div{
+    // width: 30%;
+
+}
+
+.multiple-img-container {
+    display: flex;
+    width: 60%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main-div-section-fourth-container{
+        display: block;
+        padding: 40px 15px;
+    }
+
+    .multiple-img-container {
+        display: flex;
+        width: auto;
+    }
+
+    .find-campings-div{
+        margin-top: 45px;
+    }
+
+    .fourt-second-side-main-heading {
+        width: auto;
+        font-size: 30px;
+    }
+
+    .m3-img {
+        width: 170px;
+    }
+
+    .m2-img {
+        width: 120px;
+    }
+    .m1-img {
+        width: 90px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-container-brand {
+        padding: 0 15px;
+    }
+
+    .m3-img {
+        width: 150px;
+    }
+
+    .m2-img {
+        width: 125px;
+    }
+    .m1-img {
+        width: 85px;
+    }
+
+    .fourt-second-side-child-heading{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        font-family: "Lato";
+    
+    }
+    .fourt-second-side-main-heading {
+        font-size: 16px;
+    }
+
+    .main-div-section-fourth-container{
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

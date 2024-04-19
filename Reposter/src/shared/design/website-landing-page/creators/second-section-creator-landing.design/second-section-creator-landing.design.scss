@@ -1,0 +1,97 @@
+.text-center-second-section-creator {
+    text-align: center;
+    line-height: 35px;
+}
+
+.benefits-card-list {
+    display: flex;
+    gap: 16px;
+    margin: 60px 85px;
+    background: rgba(255, 255, 255, 1) !important;
+}
+
+.second-card-list-creator {
+    width: 430px !important;
+    transition: box-shadow 0.3s, opacity 0.3s; /* Added transition for box-shadow and opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.second-card-list-creator:hover {
+    opacity: 0.9; /* Decrease opacity on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.card-title-s {
+    padding: 15px 0 5px 15px;
+    color: #6f42c1;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.card-img-s {
+    padding: 15px 0 5px 15px;
+}
+
+.card-descp-s {
+    color: #6c757d;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.fade-in-section-creator {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 500ms cubic-bezier(0.47, 0, 0.745, 0.715), transform 500ms cubic-bezier(0.47, 0, 0.745, 0.715), visibility 500ms cubic-bezier(0.47, 0, 0.745, 0.715); /* Decreased duration to 500ms */
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-creator.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main-card-creator-section {
+        margin: 70px 0 20px 0;
+    }
+
+    .benefits-card-list {
+        margin: 40px 25px !important;
+        width: auto !important;
+        flex-direction: column !important;
+    }
+
+    .card-title-s {
+        font-size: 14px;
+    }
+
+    .card-descp-s {
+        font-size: 12px !important;
+        line-height: 16px !important;
+    }
+    
+    .second-card-list-creator {
+        width: 375px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .benefits-card-list {
+        display: flex;
+        margin: 60px 85px;
+        flex-direction: column;
+    }
+
+    .second-card-list-creator {
+        width: auto !important;
+    }
+
+    .text-center-second-section-creator {
+        font-size: 30px;
+        width: auto;
+    }
+}

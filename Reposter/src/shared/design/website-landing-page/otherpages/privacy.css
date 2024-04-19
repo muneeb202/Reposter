@@ -1,0 +1,29 @@
+.centainerr {
+    max-width: 100%;
+    padding: 90px;
+    border-radius: 10px;
+}
+
+.h11 {
+    font-size: 35px;
+}
+
+.h12 {
+    font-size: 25px !important;
+}
+
+.pp {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #131446c9;
+    border-left: 4px solid #212529;
+    padding-left: 10px;
+}
+
+.important {
+    color: #ff5c5c;
+}
+
+.contact-email {
+    color: #0c64fe;
+}

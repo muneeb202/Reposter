@@ -1,0 +1,34 @@
+.flex-container-creator-umt-profile{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+.col-3-reposter-umt-profiles {
+    flex: 0 0 25%;
+}
+
+.col-6-reposter-umt-profiles {
+    flex: 0 0 50%;
+}
+
+.text-field-design-umt-profile {
+    width: 475px !important;
+    border: 1px solid #770CF1;
+    height: 70px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.link-btn-div {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin-top: 20px;
+}
+
+.text-field-design-umt-profile::placeholder{
+    padding: 10px;
+}

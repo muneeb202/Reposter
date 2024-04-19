@@ -1,0 +1,69 @@
+.flex-creator-container-transaction-history {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 25px;
+}
+
+.col-8-creator-container-transaction-history {
+    flex: 0 0 35%;
+    /* display: flex; */
+}
+
+.creator-container-transaction-history-social-media-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.creator-container-transaction-history-show-social-accounts-detail {
+    display: flex;
+    margin: 15px 0;
+}
+
+.creator-container-transaction-history-show-social-accounts {
+    /* margin: 0px 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.creator-container-transaction-add-icon{
+    margin-top: -40px;
+}
+
+.creator-container-transaction-btn-add-socail-media-detail {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    width: 150px;
+    height: 126px;
+    margin-top: 25px;
+}
+
+.show-project-income-heading{
+    display: flex;
+    gap: 95px;
+
+}
+
+.col-6-creator-transaction-history {
+    flex: 0 0 48%;
+    /* margin: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator-transaction-history-show-project-income-state {
+    margin-top: 10px;
+    border: 2px solid #770cf1;
+    border-radius: 15px;
+    width: 163px;
+    height: 96px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

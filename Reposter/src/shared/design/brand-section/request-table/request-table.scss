@@ -1,0 +1,42 @@
+.flex-container-request-table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.col-6-request-table {
+    flex: 0 0 15%;
+}
+
+.col-8-request-table {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.table-container {
+    border: 2px solid #770CF1;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.MuiDivider-root {
+    border: 2px solid #770CF1 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-8-request-table {
+        flex: 0 0 95%;
+        margin-top: 20px;
+    }
+
+    .col-6-request-table {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+
+}

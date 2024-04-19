@@ -1,0 +1,115 @@
+.text-center-second-section-creator{
+    font-size: 30px !important;
+    color: rgb(19,20,70) !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+.third-card-brand {
+    width: 430px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: box-shadow 0.2s, opacity 0.2s; /* Reduced transition duration */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.fade-in-section-creator {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 1000ms cubic-bezier(0.47, 0, 0.745, 0.715), transform 1000ms cubic-bezier(0.47, 0, 0.745, 0.715), visibility 1000ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    will-change: opacity, transform, visibility;
+}
+
+
+.card-img-s-brand {
+    padding: 15px 0 5px 15px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.card-title-s-brand {
+    font-size: 20px;
+    padding: 15px 0 5px 0px;
+    color:  #717275;
+    width: 154px;
+    text-align: center;
+}
+
+.third-section-main-card-list {
+    display: flex;
+    gap: 16px;
+    margin-inline: auto;
+    max-width: 1475px;
+    padding: 35px 114px;
+    background: rgb(255, 255, 255) !important;
+}
+
+.color-heading-landing{
+    font-size: 30px !important;
+    color:#13547a !important;
+}
+
+.fade-in-section-creator.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+@media only screen and (min-width:350px) and (max-width: 768px) {
+    .third-card-brand {
+        width: auto !important;
+    }
+
+    .third-section-main-card-list {
+        flex-direction: column;
+        padding: 15px 15px;
+    }
+
+    .card-title-s-brand{
+        width: auto;
+    }
+}
+
+
+.third-card-brand {
+    transition: box-shadow 0.3s, opacity 0.3s; /* Added transition for box-shadow and opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.third-card-brand:hover {
+    opacity: 0.9; /* Decrease opacity on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+
+.card-container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s;
+}
+
+.third-card-brand:hover .card-container {
+    // transform: scale(1.1);
+    opacity: 0.9; /* Decrease opacity on hover */
+    box-shadow: 0 8px 16px rgba(168, 44, 44, 0.2); /* Shadow effect on hover */
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s;
+}
+
+.third-card-brand:hover .content {
+    background-color: rgba(255, 255, 255, 0.95);
+}

@@ -1,0 +1,79 @@
+.col-12 {
+    display: flex;
+    // width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.col-6-signup{
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    // border: 10px solid red;
+}
+
+.signup-heading {
+    width: 100%;
+    height: 36px;
+    top: 146px;
+    left: 228px;
+    justify-content: center;
+    display: flex;
+    color: #770CF1;
+    ;
+
+}
+
+.form-data {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    height: 0.4em !important;
+}
+
+.select-field {
+    width: 475px !important;
+}
+
+.label-class {
+    color: #616161 !important;
+}
+
+.password-text-field-design {
+    width: 475px !important;
+
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: end;
+}
+
+.login-btn-div{
+    background-color:#770cf1;
+    border-radius: 4px;
+}
+
+.login-btn{
+    color: #fff !important;
+    width: 300px !important;
+
+}
+.google-btn{
+    border: 1px solid #770cf1;
+    border-radius: 30px;
+    width: 300px;
+    text-align: center;
+    color: #770CF1 !important;
+
+}
+
+.side-img{
+    object-fit: cover;
+    width: 575px ;
+}

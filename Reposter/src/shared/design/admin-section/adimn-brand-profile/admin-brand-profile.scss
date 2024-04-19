@@ -1,0 +1,84 @@
+.flex-container-admin-user-profile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.col-6-admin-user-profile {
+    flex: 0 0 15%;
+}
+
+.col-8-admin-user-profile {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.all-user-data {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.product-section-container {
+    display: flex;
+}
+
+.admin-view-all-heading {
+    display: flex;
+    justify-content: end;
+    margin: 5px 0px 0 0;
+    width: 93%;
+    text-decoration: underline;
+}
+
+.product-section-container {
+    display: flex;
+}
+
+.admin-show-packaages {
+    display: flex;
+    width: 100%;
+}
+
+.admin-packages {
+    border: 2px solid #770cf1;
+    border-radius: 10px;
+    width: 75%;
+    height: 60px;
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-btn-div {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.btn-admin-close-account {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    // width: 100px;
+    margin-left:5px !important;
+}
+
+.btn-admin-disable-account {
+    border: 3px solid #770cf1 !important;
+    color: #770cf1!important;
+    text-transform: capitalize !important;
+    // width: 100px;
+    margin-left:5px !important;
+}
+
+.admin-product-section-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px 0 0 0;
+}

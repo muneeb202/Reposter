@@ -1,0 +1,167 @@
+.flex-container-appicant {
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.col-6-appicant {
+    flex: 0 1 15%;
+}
+
+.col-8-appicant {
+    flex: 0 0 70%;
+    margin-top: 5px;
+}
+
+//jobs
+
+//jobs//
+
+.applicat-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 15px;
+    gap: 10px;
+    flex-grow: 1
+}
+
+.applicat-list {
+    border: 3px solid #770cf1;
+    border-radius: 25px;
+    width: 300px;
+    height: 200px;
+}
+
+.applicat-list:hover {
+    background-color: #770cf1;
+    color: #fff;
+}
+
+.applicat-data-list {
+    display: flex;
+    margin: 20px;
+    // flex-direction: column;
+}
+
+.applicat-data {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.applicat-state {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    margin: 15px;
+    padding-top: 10px;
+}
+
+.applicant-p {
+    color: #474747;
+    font-size: 12px;
+}
+
+.applicant-p:hover {
+    color: #fff;
+}
+
+.space-a {
+    margin-left: 30px;
+}
+
+.btn-views-prop {
+    margin: 15px 95px;
+}
+
+
+.btn-views {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+}
+
+.applicat-list:hover .user-name {
+    color: #fff
+}
+
+.applicat-list:hover .applicant-p {
+    color: #fff
+}
+
+.btn-views-appli {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.applicant-or-post-job-d-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .flex-container-appicant {
+        justify-content: center;
+        display: flex;
+    }
+
+    .col-6-appicant {
+        flex: 0 1 15%;
+        margin-left: 100px;
+    }
+
+    .col-8-appicant {
+        flex: 0 0 70%;
+        margin-top: 5px;
+    }
+
+    .col-8-appicant .applicant-or-post-job-d-flex {
+        width: 85%;
+    }
+
+    .applicat-list{
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-container-appicant {
+        display: block;
+
+    }
+
+    .resposnsive-h-d {
+        text-align: center;
+    }
+
+    .col-6-appicant {
+        flex: 0 0 100%;
+    }
+
+    .col-8-appicant {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+
+    .applicat-list-div {
+        justify-content: center;
+    }
+
+    .space-a {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .applicant-or-post-job-d-flex {
+        display: block;
+        width: 100%;
+    }
+
+}

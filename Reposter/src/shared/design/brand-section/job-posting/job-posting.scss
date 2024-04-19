@@ -1,0 +1,267 @@
+.job-posting-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 33%;
+
+}
+
+.form-data-job-posting {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    height: 0.4em !important;
+    border-radius: 15px !important;
+    border: 2px solid #CCCCCC1A !important;
+}
+
+
+.label-class {
+    color: #616161 !important;
+}
+
+.text-field-design-job-posting {
+    width: 400px !important;
+    border: 3px solid #770CF1;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+.text-field-design-job-posting-skill {
+    width: 400px !important;
+    border: 3px solid #770CF1;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+p {
+    color: #616161;
+}
+
+a {
+    color: #770CF1 !important;
+
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  margin-top: 15px;
+
+}
+
+.col-4-job-posting {
+    flex: 0 1 20%;
+    margin-left: 35px;
+}
+
+.col-4-job-posting-skill {
+    flex: 0 1 20%;
+    margin-left: 35px;
+
+}
+
+.btn-one {
+    border: 3px solid #770cf1;
+    border-radius: 30px;
+    width: 100px;
+    gap: 20px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    // justify-content: end !important;
+}
+
+.skill-tag-group {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    width: 430px;
+}
+
+.btn-select-file {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    // margin: 10px;
+    margin-top: 10px;
+    width: 400px;
+    height: 215px;
+}
+
+.add-file-icon-job-posting {
+    background: #770cf1;
+    font-size: 30px !important;
+    color: #fff;
+    border-radius: 10%;
+}
+
+.add-file-icon {
+    background: #770cf1;
+    font-size: 30px !important;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.btn-skills {
+    display: flex !important;
+    justify-content: end !important;
+    width: 100% !important;
+}
+
+.select-img-section {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.selected-img {
+    width: 50px;
+}
+
+
+.text-field-design-description {
+    height: 65vh !important;
+    border: 2px solid #770cf1 !important;
+    border-radius: 10px !important;
+    width: 400px !important;
+}
+
+.text-field-design-description::placeholder {
+    padding: 15px 5px;
+
+}
+
+text-field-design-description:focus {
+    border: 2px solid #770cf1 !important;
+    border-radius: 10px !important;
+}
+
+.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
+    height: 470px !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:hover {
+    border: 2px solid #770cf1 !important;
+    border-radius: 0 !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:focus {
+    border: 2px solid #770cf1 !important;
+    border-radius: 0 !important;
+
+}
+
+.sample-required-section {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.swich-class {
+    justify-content: end;
+}
+
+.heading-of-sample {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #770cf1 !important;
+
+}
+
+.swich-class {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    color: #770cf1 !important;
+}
+
+.skill-add-icon {
+    color: #770cf1 !important;
+}
+
+.css-1d6wzja-MuiButton-startIcon {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.text-field-design-job-posting-skill::placeholder {
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        margin: 10px;
+    }
+
+    .col-4-job-posting {
+        flex: 0 0 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-4-job-posting-skill {
+        flex: 0 0 100%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+
+    }
+
+    .text-field-design-job-posting {
+        width: auto;
+    }
+
+    .text-field-design-job-posting-skill {
+        width: auto;
+    }
+
+    .btn-select-file {
+        width: auto;
+    }
+
+    .select-img-section {
+        justify-content: center;
+    }
+
+    .skill-tag-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 400px;
+    }
+}
+
+// @media (min-width: 768px) and (max-width: 1360px) {
+//     .text-field-design-job-posting {
+//         margin-top: 19.5px;
+//     }
+
+//     .text-field-design-description {
+//         margin-top: 15px;
+//     }
+
+//     .col-4-job-posting-skill {
+//         width: 100%;
+//         flex: 0 0 40%
+//     }
+// }

@@ -1,0 +1,136 @@
+.flex-container-brand-upload {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.col-6-brand-upload {
+    flex: 0 0 15%;
+}
+
+.col-8-brand-upload {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.heading {
+    color: #770cf1;
+}
+
+.upload-brand-section {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0; 
+}
+
+.container-brand-upload {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.form-data-job-posting {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.btn-select-upload-file {
+    border: 2px solid #770cf1;
+    border-radius: 2px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    // margin: 10px;
+    margin-top: 10px;
+    width: 300px;
+    height: 200px;
+    flex-direction: column-reverse;
+}
+
+.description-upload-text {
+    border: 2px solid #770cf1;
+    border-radius: 2px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    // margin: 10px;
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+}
+
+.upload-heading{
+    color: black;
+}
+.upload-content-section{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.select-plateform-img-section{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.selected-plateform-img{
+    width: 66px;
+    height: 60px
+}
+.description-upload-text:hover{
+    border: 1px solid #770cf1 !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .col-8-brand-upload {
+        flex: 0 0 100%;
+    }
+    .container-brand-upload {
+        flex-wrap: wrap;
+    }
+
+    .upload-content-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .upload-brand-section{
+        width: 75%;
+    }
+
+    .respronsive-h-r{
+        text-align: center;
+    }
+
+    .btn-select-upload-file {
+        width: 100%;
+    }
+    .description-upload-text {
+        width: 100%;
+    }
+
+    .select-plateform-img-section{
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .col-6-brand-upload {
+        flex: 0 0 100%;
+    }
+
+    .label-class-settings-btn{
+        width: 100% !important;
+        text-align: center !important;
+    }
+}

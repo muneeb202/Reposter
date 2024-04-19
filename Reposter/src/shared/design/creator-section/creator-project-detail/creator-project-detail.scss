@@ -1,0 +1,26 @@
+.creator-umt-project-detail {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.creator-single-social-account-detail {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.main-creator-container-transaction-history-show-social-accounts{
+    margin: 17px;
+}
+
+.text-field-design-creator-project-detail{
+    width: 200px !important;
+    border: 3px solid #770CF1;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 3px;
+}

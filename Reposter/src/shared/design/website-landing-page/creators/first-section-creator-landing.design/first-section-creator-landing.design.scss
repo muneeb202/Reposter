@@ -1,0 +1,221 @@
+.main-first-section-creator-container {
+    display: flex;
+    // gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+}
+
+.main-first-section-creator-heading {
+    width: 645px;
+    margin-bottom: 50px;
+
+}
+
+.main-first-section-creator-description {
+    width: 330px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 16px
+}
+
+.see-dashboard-btn {
+    padding: 1px !important;
+    color: #fff !important;
+    border: 5px solid linear-gradient(78.51deg, #770CF1 6.54%, #FE0C0C 99.12%) !important;
+    background: rgba(119, 12, 241, 1) !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    width: 165px;
+    font-size: 0.7rem !important;
+    height: 45px;
+    /* margin-top: 5px !important; */
+}
+
+.see-dashboard-btn:hover {
+    background: linear-gradient(78.51deg, #770CF1 6.54%, #FE0C0C 99.12%) !important;
+}
+
+.btn-text-section {
+    display: flex;
+    gap: 15px;
+}
+
+.heading-c-r {
+    font-size: 18px !important;
+    padding-top: 10px;
+}
+
+.girl-creator-img {
+    width: 500px;
+    height: 600px;
+}
+
+.first-side-creator-column {
+    padding: 80px 70px;
+    width: 70%;
+
+}
+
+.creator-background-img-container {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90%;
+    margin-top: 15px;
+}
+
+.h22{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 30px !important;
+    color: rgb(19, 20, 70) !important;
+}
+.first-section-card-state-creator {
+
+    // margin: 250px 0 !important;
+    // position: absolute;
+    width: 400px !important;
+    // bottom: 150px;
+}
+
+.customTitle {
+    color: rgba(0, 0, 0, 1);
+    /* Change this to your desired color */
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.customSubheader {
+    color: rgba(244, 50, 42, 1);
+    /* Change this to your desired color */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.show-card-state-creator {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.show-card-state-heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.show-card-state-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.active-text-class {
+    color: rgba(254, 146, 12, 1);
+}
+
+
+.container-of-card-f-section-second-c {
+    position: absolute;
+    top: 63%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.images-with-state-section-creator{
+    position: relative;
+    // display: flex;
+    // width: 100%;
+    // justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-first-section-creator-container {
+        display: block;
+    }
+
+    .first-side-creator-column {
+        width: 100%;
+    }
+
+
+
+
+    .first-side-creator-column {
+        padding: 35px 5px;
+        width: auto;
+    }
+
+    .container-of-card-f-section-second-c {
+        left: 30%;
+        // bottom: -25%;
+        top: 90%;
+    }
+
+    .first-section-card-state-creator {
+        width: auto !important;
+    }
+
+    .creator-background-img-container {
+        width: 50%;
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .main-first-section-creator-heading {
+        width: auto;
+        font-size: 20px;
+        padding: 0 30px;
+    }
+
+    .see-dashboard-btn {
+        font-size: 0.5rem !important;
+    }
+
+    .heading-c-r {
+        font-size: 18px !important;
+    }
+
+    .container-of-card-f-section-second-c {
+        left: 52%;
+        // bottom: -25%;
+        top: 90%;
+    }
+
+    .first-section-card-state-creator {
+        width: auto !important;
+    }
+
+    .creator-background-img-container {
+        width: 95%;
+        // margin: 0 25px;
+    }
+
+    .main-first-section-creator-description{
+        padding: 0 30px;
+    }
+
+    .btn-text-section {
+        padding: 0 30px;
+    }
+
+    .see-dashboard-btn{
+        width: 100px !important;
+    }
+
+    .main-first-section-creator-container {
+        margin-top: 5px;
+    }
+
+    .images-with-state-section-creator{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

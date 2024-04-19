@@ -1,0 +1,127 @@
+.main-card-rating-creator-landing-container {
+    /* background: #F1F1F1; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.sub-text-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    text-align: center;
+    width: 26%;
+    padding-top: 10px;
+
+}
+
+.rating-on-card-creator {
+    padding: 10px 0;
+}
+
+.end-section-card-creator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-type {
+    color: rgba(114, 114, 114, 1) !important;
+    margin-top: 20px !important;
+}
+
+.arrow-icons-footer {
+    cursor: pointer;
+    padding-top: 65px;
+}
+
+.right-arrow-l {
+    font-size: 2.5rem !important;
+}
+
+.right-arrow-r {
+    font-size: 2.5rem !important;
+    // color: rgba(254, 146, 12, 1) !important;
+}
+
+.card-rating-container {
+    padding: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.right-arrow-l:active {
+    color: rgba(254, 146, 12, 1) !important;
+}
+
+.right-arrow-r:active {
+    color: rgba(254, 146, 12, 1) !important;
+}
+
+.carousel-line {
+    height: 2px;
+    background-color: #ccc; /* Regular line color */
+    border: none;
+    width: 50%;
+  }
+  
+  .carousel-line.active {
+    background-color: #007bff; /* Active line color */
+  }
+
+  .card-rating-container-creator {
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .right-arrow-l {
+        // display: none !important;
+    }
+
+    .right-arrow-r {
+        // display: none !important;
+    }
+
+    .rating-on-card-creator {
+        font-size: 1rem !important;
+    }
+
+    .customTitle {
+        font-size: 0.9rem !important;
+    }
+    .carousel-line{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    // .card-container-brand {
+    //     padding: 0 15px;
+    //     width: auto;
+    //     flex-direction: column;
+    // }
+
+    .card-rating-container-creator {
+        padding: 30px;
+        display: flex;
+        // flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-card-rating-creator-landing-container {
+        flex-direction: row;
+    }
+
+    .show-rating-card-seven-creator{
+        width: auto !important;
+    }
+
+    .carousel-line{
+        display: none;
+    }
+
+}

@@ -1,0 +1,138 @@
+.main-footer-container {
+    background-image: linear-gradient(to right, #770cf1, #770cf1 25%, #fe920c 100%, #fe920c);
+    width: 100%;
+    // height: 354px;
+}
+
+.main-footer-container-section {
+    width: 100%;
+    justify-content: space-around;
+    height: 354px;
+    display: flex;
+}
+
+.footer-section {
+    width: 33.3%;
+    margin: 50px 100px;
+}
+
+.footer-section-text {
+    width: 15%;
+}
+
+.second-section-footer {
+    display: flex;
+    gap: 35px;
+
+}
+
+.request-a-call-btn {
+    border: 1px solid #fe920c !important;
+    background: #fe920c !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 150px;
+    margin-left: 12px !important; /* Add margin to create space between buttons */
+}
+
+.get-started-land-btn {
+    border: 1px solid white !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 100px;
+    color: white !important;
+    // margin-right: 10%;
+}
+
+
+.request-a-call-btn:hover {
+    background: linear-gradient(78.51deg, #770CF1 6.54%, #FE0C0C 99.12%) !important;
+}
+.get-started-land-btn:hover {
+    background: linear-gradient(78.51deg, #770CF1 6.54%, #FE0C0C 99.12%) !important;
+}
+ 
+
+
+.footer-visa-icon {
+    width: 105px;
+    height: 38px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    object-fit: contain;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.btn-section-footer {
+    padding-top: 20px;
+}
+
+.p-description-text-f:hover{
+    cursor: pointer;
+    color: #fe920c !important;
+    text-decoration: underline;
+    text-underline-offset:10px
+}
+
+.p-description-text-f {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 5px;
+
+}
+
+.p-contact-text-f {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 5px;
+    text-align: end;
+}
+
+.footer-hr-class {
+    border-color: rgba(119, 12, 241, 0.37) !important;
+    width: 85%;
+    margin: 0 75px;
+}
+
+.copy-right-footer-text {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+@media only screen and (max-width: 768px) {
+    .main-footer-container-section {
+        width: 100%;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: auto;
+        margin: 30px 0;
+    }
+
+    .p-contact-text-f {
+        text-align: center;
+    }
+
+    .footer-visa-icon {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-hr-class{
+        width: auto;
+    }
+}

@@ -1,0 +1,93 @@
+.notification-dialog {
+    height: 100% !important;
+    display: flex !important;
+    width: 100% !important;
+
+}
+
+.dialog-title {
+    // display: flex;
+    font-size: 16px !important;
+}
+
+.dialog-title-div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 25% !important;
+}
+
+.css-hz1bth-MuiDialog-container {
+    justify-content: end !important;
+    align-items: start !important;
+    margin: 26px 140px 0 0px !important;
+
+}
+
+.notification-hr {
+    width: 100%;
+    margin: 15px 0 10px 0 !important;
+}
+
+.btn-mark-all-read-div {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-mark-all-read {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: lowercase !important;
+    // width: 100px;
+}
+
+.noti-other-heading {
+    font-size: 14px;
+    color: #1A1918 !important;
+}
+
+.notification-detail {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+
+.sub-notification-list {
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.sub-s-notification-list{
+    display: flex;
+    margin: 10px 0 10px 10px;
+    gap: 10px;
+    border: 3px solid #770CF129;
+    margin: 7px 30px;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.notification-duration{
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    color: #524A3ED1;
+}
+
+.notification-img{
+    width: 18px;
+    height: 14px;
+}
+
+.unread-notification-list:hover{
+    background: #DCCFEB;
+    width: 100%;
+}

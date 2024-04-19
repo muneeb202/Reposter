@@ -1,0 +1,327 @@
+.flex-container-prposal-on-job {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+   
+}
+
+.col-6-prposal-on-job {
+    flex: 0 0 15%;
+}
+
+.col-8-prposal-on-job {
+    flex: 0 0 25.5%;
+    margin: 5px 15px;
+}
+.complete-user-info {
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin: 10px 15px;
+}
+
+.info-tag {
+    margin: 10px 5px;
+    font-size: 16px;
+}
+
+.info-detail-tag {
+    margin: 10px 10px;
+    color: #770CF1;
+    font-size: 16px;
+
+}
+
+.prposal-on-job-container {
+    display: flex;
+}
+
+.prposal-on-job-div {
+    display: flex;
+    flex-wrap: wrap;
+    // width: 425px;
+    margin: 10px;
+    // height: 529px;
+}
+
+.user-feedback-list {
+    border: 3px solid #770cf1;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 200px;
+}
+
+.user-personal-info {
+    margin: 5px;
+}
+
+.user-personal-img {
+    width: 100px;
+    height: 100px;
+}
+
+.prposal-jobs-list {
+    border: 2px solid #770cf1;
+    border-radius: 10px;
+    width: 490px;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.proposal-jobs {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.propsal-on-this-job {
+    display: flex;
+}
+
+.project-overview-section {
+    margin: 20px 15px;
+}
+.project-overview-section-r{
+    margin: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-overview-p {
+    color: #6C6C6C;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.skill-tag-list {
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+}
+
+.skill-tag {
+    background: #EFEFEF;
+    width: 80px;
+    height: 30px;
+    color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.propsal-tag-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.prp-heading {
+    display: flex;
+    gap: 50px;
+}
+
+.propsal-verified-section {
+    display: flex;
+    // margin: 5px -25px;
+    width: 155px;
+}
+
+.copy-url {
+    width: 265px;
+    height: 50px;
+    border: 0;
+    border: none;
+    outline: none;
+    background: #EDEDED;
+    text-align: center;
+}
+
+.input-with-icon #ContentCopyIcon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.btn-chat-now {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 120px;
+}
+.samples-of-project-list {
+    border: 3px solid #770cf1;
+    border-radius: 15px;
+    width: 115px;
+}
+
+.samples-of-project-data-list {
+    display: flex;
+    margin: 10px;
+}
+
+.samples-of-project-data {
+    display: flex;
+    // margin-left: 10px;
+    flex-direction: column;
+}
+
+.make-font-small {
+    font-size: 12px;
+    color: #373737;
+}
+
+.folder-icon {
+    display: flex;
+    padding-top: 5px;
+    gap: 2px;
+}
+
+.space-ab {
+    margin-left: 5px;
+}
+
+.copy-url-icon {
+    position: absolute !important;
+    right: 185px !important;
+    top: 15px !important;
+}
+
+.user-profile-section-prposal {
+    margin: 14px 0;
+    display: flex;
+}
+
+.all-user-data-prposal {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.btn-views-profile-from-p {
+    /* margin: 15px 95px; */
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.folder-i{
+    color: #770CF180 !important;
+}
+
+.p-rating-section{
+    font-size: 14px !important;
+}
+
+.p-description{
+    font-size: 10px;
+    color: #373737;
+    padding-top: 10px;
+}
+
+.feedback-data-prposal {
+    margin: 10px
+}
+
+.rating-section-prposal {
+    color: #770CF1 !important;
+    font-size: 15px !important
+}
+.feedback-comment-prposal {
+    color: #000000;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.job-title-proposal {
+    // padding-left: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    padding-left: 10px;
+
+}
+
+.company-name-p{
+    font-size: 10px;
+    color: #6D6D6D;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .resposnsive-h-d {
+        text-align: center;
+    }
+
+    .col-8-prposal-on-job {
+        flex: 0 0 100%;
+        margin: 10px;
+    }
+
+    .main-prposal-jobs-list {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .prposal-jobs-list {
+        width: 94%;
+    }
+
+    .proposal-jobs {
+        width: 98%;
+    }
+
+    .prp-heading {
+        gap: 28px;
+    }
+
+    .prposal-on-job-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .user-profile-section-prposal {
+        margin: 14px;
+        display: flex;
+    }
+
+    .copy-url-icon {
+      
+        right: auto !important;
+    }
+
+    .all-user-data-prposal {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .complete-user-info {
+        justify-content: center;
+    }
+
+    .col-6-prposal-on-job {
+        flex: 0 0 75%;
+    }
+
+    .user-feedback-list {
+        border: 3px solid #770cf1;
+        border-radius: 15px;
+        margin: 10px 0;
+        width: auto;
+    }
+
+    .prposal-on-job-div {
+       justify-content: center;
+    }
+
+    .btn-views-profile-from-p {
+        width: 100%;
+    }
+    
+
+
+}

@@ -1,0 +1,375 @@
+.flex-container-reports {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 3px;
+    // justify-content: center;
+    margin-top: 15px;
+
+}
+
+.col-6-reports {
+    flex: 0 0 30%;
+    // margin: 10px;
+    display: flex;
+
+}
+
+.col-8-reports {
+    flex: 0 0 50%;
+    padding-left: 50px;
+}
+
+
+.view-all-project-btn {
+    background-color: #770cf1;
+    border-radius: 4px;
+    width: 150px;
+    color: #ffff !important;
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+}
+
+.on-going-projects-report {
+    margin-top: 10px;
+}
+
+.on-going-project-heading-report {
+    color: #474747;
+}
+
+.on-going-project-heading {
+    color: #474747;
+}
+
+.on-going-projects-list-report {
+    background: #770cf1;
+    border-radius: 5px;
+    width: 475px;
+    height: 125px;
+}
+
+.on-going-projects-list-heading {
+    color: #FFFFFF;
+    margin: 10px;
+    padding-top: 10px;
+
+}
+
+.on-going-projects-list-desc {
+    color: #FFFFFF;
+    text-align: justify;
+    margin: 10px;
+
+}
+
+.edit-description {
+    margin-top: 30px !important;
+    height: 150px !important;
+}
+
+.project-heading {
+    color: #474747;
+}
+
+.show-project-income {
+    margin-left: 5px;
+}
+
+
+.show-project-income-state {
+    margin-top: 10px;
+    border: 2px solid #770cf1;
+    border-radius: 15px;
+    width: 190px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.show-project-desc {
+    color: #770cf1;
+    font-size: 20px;
+    text-decoration: solid;
+}
+
+.space {
+    margin: 10px 0px 10px 40px;
+}
+
+.show-social-accounts {
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.single-social-account-detail {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+p {
+    color: #770cf1;
+}
+
+.make-flex {
+    display: flex;
+    color: #474747;
+}
+
+.color-icon {
+    color: #770cf1 !important;
+
+}
+
+.btn-add-socail-media-detail-report {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    width: 185px;
+    height: 130px;
+    margin-top: 15px;
+}
+
+.social-media-section {
+    display: flex;
+    padding-top: 25px;
+}
+
+.on-going-projects-list-two-report {
+    background: #fff;
+    border: 2px solid #770cf1;
+    border-radius: 5px;
+    width: 475px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.on-going-projects-list-two {
+    background: #fff;
+    border: 2px solid #770cf1;
+    border-radius: 5px;
+    width: 420px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.btn-add-bank-report {
+    border: 3px solid #770cf1;
+    border-radius: 10px;
+    color: #770CF1 !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    margin-top: 10px;
+    width: 400px;
+    // height: 160px;
+}
+
+.text-field-design-report {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #770cf1;
+}
+
+.label-class-report {
+    color: #616161 !important;
+    margin-bottom: 10px;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.label-class-report-pro {
+    color: #616161 !important;
+    margin-bottom: 10px;
+}
+
+.report-h {
+    margin: 0 35px;
+    font-size: 14px;
+}
+
+.show-project-income-heading {
+    display: flex;
+    /* gap: 95px; */
+    justify-content: space-evenly;
+    margin-left: -55px;
+}
+
+
+.d-report-f {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.project-heading-reportP {
+    color: #474747;
+}
+
+.text-field-design-report::placeholder {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .messages-heading {
+        text-align: center;
+    }
+
+    .col-6-reports {
+        flex: 0 0 100%;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .col-8-reports {
+        flex: 0 0 100%;
+        margin-top: 10px;
+        padding-left: 0;
+
+    }
+
+    .messages {
+        width: 90%;
+    }
+
+    .on-going-projects-list-report {
+        width: 100%;
+    }
+
+    .on-going-projects-list-two-report {
+        width: 100%;
+    }
+
+    .show-project-income {
+        display: flex;
+        gap: 5px;
+    }
+
+    .view-all-project-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .show-social-accounts {
+        gap: 15px;
+    }
+
+    .label-class-report {
+        text-align: center;
+    }
+
+    .btn-add-socail-media-detail-report {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .on-going-project-heading-report {
+        text-align: center;
+    }
+
+    .report-h {
+        margin-right: 45px;
+        font-size: 14px;
+    }
+
+    .show-social-accounts {
+        gap: 10px;
+    }
+
+    .d-report-f {
+        justify-content: center;
+    }
+
+    .social-media-section {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-heading {
+        text-align: center;
+    }
+
+}
+
+// @media (min-width: 768px) and (max-width: 992px) {
+
+//     .messages-heading {
+//         text-align: center;
+//     }
+
+//     .col-6-reports {
+//         flex: 0 1 100%;
+//     }
+
+//     .col-8-reports {
+//         flex: 0 0 100%;
+//         margin-top: 10px;
+//         // display: flex;
+//     }
+
+//     .messages {
+//         width: 90%;
+//     }
+
+//     .on-going-projects-list-report {
+//         width: 100%;
+//     }
+
+//     .on-going-projects-list-two-report {
+//         width: 100%;
+//     }
+
+//     .on-going-projects-list-two-report {
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//     }
+
+//     .show-project-income {
+//         display: flex;
+//         gap: 5px;
+//     }
+
+//     .view-all-project-btn {
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//     }
+
+//     .social-media-section {
+//         display: block;
+//     }
+
+//     .show-social-accounts {
+//         gap: 15px;
+//     }
+
+//     .label-class-report {
+//         text-align: center;
+//     }
+
+//     .btn-add-socail-media-detail-report {
+//         width: 100%;
+//         margin: 15px 0;
+//     }
+
+//     .on-going-project-heading-report {
+//         text-align: center;
+//     }
+
+//     .report-h{
+//         margin-right: 45px;
+//         font-size: 14px;
+//     }
+// }

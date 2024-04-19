@@ -1,0 +1,71 @@
+.flex-container-admin-find-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // justify-content: center;
+    flex-direction: column;
+}
+
+.admin-start-job-section {
+    display: flex;
+    // border: 2px solid #770cf1;
+    width: 79%;
+    justify-content: space-between;
+}
+
+.col-6-admin-find-jobs {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    // margin-top: 10px;
+
+}
+
+.col-8-admin-find-jobs {
+    flex: 0 0 74%;
+}
+
+
+.filter-section {
+    width: 100%;
+    margin: 10px 30px;
+
+}
+
+#demo-radio-buttons-group-label {
+    color: #393F47 !important;
+    font-weight: bold !important;
+}
+
+.radio-c {
+    margin-bottom: -10px !important;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+    color: #770cf1 !important;
+}
+
+.search-btn {
+    background: #770cf1 !important;
+    border: 2px solid #770cf1 !important;
+    border-radius: 2px !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    // margin-left: 5px !important;
+}
+
+.filter-on-job-nature {
+    border: 1px solid #1414141A;
+    width: 50px;
+    height: 30px;
+    font-size: 11px;
+    padding: 5px;
+    color: #393F47;
+    cursor: pointer;
+}
+.filter-on-job-nature:hover {
+    border: 1px solid #770cf1;
+    color: #770cf1;
+    background: #3575E233;
+}

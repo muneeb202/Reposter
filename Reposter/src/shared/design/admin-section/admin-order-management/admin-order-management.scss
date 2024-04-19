@@ -1,0 +1,53 @@
+.flex-container-admin-order-management {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+.pagination li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.pagination .active a {
+  background: #770CF1;
+  color: #fff !important;
+}
+
+.pagination li.disabled a {
+  pointer-events: none;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admin-order-searchbar-input::placeholder {
+  color: #FFFFFF;
+}
+
+.table-admin-order-container {
+  border: 2px solid #770CF1;
+  border-radius: 7px;
+  margin-top: 15px;
+}

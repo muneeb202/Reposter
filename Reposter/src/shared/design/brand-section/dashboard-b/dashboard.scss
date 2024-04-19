@@ -1,0 +1,38 @@
+.dashboard-heading {
+    color: #770cf1;
+}
+
+.dashboard-side-navbar {
+    color: #000000;
+    font-size: 16px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.dashboard-side-navbar:hover {
+    color: #770cf1;
+    // cursor: pointer;
+}
+.active {
+    color: #770cf1;
+    // cursor: pointer;
+}
+
+.chat-support-div {
+    // display: flex;
+    padding-top: 165px;
+}
+
+.btb-chat-support {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 130px;
+    height: 50px;
+}
+
+@media (min-width: 769px) {
+    .dashboard-container{
+        margin-left: 10px;
+    }
+}

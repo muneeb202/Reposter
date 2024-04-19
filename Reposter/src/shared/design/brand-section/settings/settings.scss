@@ -1,0 +1,119 @@
+.col-6-settings {
+    flex: 0 0 15%;
+}
+
+.col-8-settings {
+    flex: 0 0 65%;
+    margin-top: 5px;
+}
+
+.settings-form-data {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    // margin: 15px 415px 0 0px;
+    height: 100px;
+}
+
+.label-class-settings {
+    display: inline-block;
+    width: 100px;
+    margin: 15px 10px 10px 0;
+
+}
+
+.settings-form-data-btn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.label-class-settings-btn {
+    display: inline-block;
+    width: 100px;
+    margin: 5px 0 10px 0;
+    width: 15%;
+
+}
+
+.text-field-design-settings {
+    width: 350px;
+    border: 2px solid #770cf1;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.btn-of-settings {
+    width: 180px;
+    margin-top: 0px;
+    text-transform: capitalize !important;
+    border: 3px solid #770cf1;
+    /* font-size: 14px !important; */
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.btn-p-settings {
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.settings-forms-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.change-input-setting {
+    color: #000000;
+}
+
+.settings-form-data-btn-div {
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 768px) {
+    .setting-heading {
+        text-align: center;
+    }
+
+    .col-6-settings {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+    .col-8-settings {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+    .settings-forms-input {
+        display: block;
+    }
+
+    .settings-form-data {
+        display: flex;
+        /* flex-wrap: wrap; */
+        /* flex-direction: row; */
+        justify-content: center;
+        /* height: 100px; */
+    }
+
+    .change-input-setting {
+        text-align: end;
+    }
+
+    .settings-form-data-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+        align-items: center;
+    }
+
+}

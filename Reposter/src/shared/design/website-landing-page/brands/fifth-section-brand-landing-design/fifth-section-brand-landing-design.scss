@@ -1,0 +1,97 @@
+.section1{
+  background-color: rgb(252, 240, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // background-color: rgb(27, 85, 85);
+  border-radius: 20px;
+  width: 100%;
+  // margin-left: 3%;
+  // margin-top: 3%;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    // background-color: rgb(27, 85, 85);
+    border-radius: 20px;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+  
+  .item1 {
+    flex: 1;
+    padding: 10%;
+    color: rgb(19, 20, 70);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .paragraphsss {
+    margin-top: 5%;
+    padding-left: 1%;
+
+  }
+  
+  /* Style for paragraph elements */
+  .paragraphsss p {
+    margin-bottom: 10px; /* Add space below each paragraph */
+    // border-bottom: 1px solid #ccc; /* Add line between paragraphs */
+    padding-bottom: 5px; /* Adjust as needed */
+    color: rgb(9, 5, 75);
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+
+  }
+  
+  .item2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 6%;
+  }
+  
+  .image-container {
+    // background-color: #377e7e;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .image-container1 {
+    background-color: #eedce5;
+    border-radius: 20px;
+    padding: 10px;
+    // margin-top: 5%;
+  }
+  
+  .image01 {
+    width: 400px;  
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  
+  .section.animate-section {
+    // Add your animation properties here
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  h2{
+    font-family: 'Inter', sans-serif;
+  }

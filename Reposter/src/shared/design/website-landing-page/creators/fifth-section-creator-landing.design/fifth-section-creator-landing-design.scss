@@ -1,0 +1,141 @@
+.our-integration-heading {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32.5px;
+    width: 265px;
+    text-align: center;
+}
+
+.sub-text-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #6c757d;
+    text-align: center;
+    width: 400px;
+    padding-top: 15px;
+}
+
+.show-social-media-icons-list {
+    background: rgba(0, 0, 0, 0.06);
+    width: 75%;
+    margin: 35px 200px;
+    gap: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+}
+
+.parant-row-one-social-medias {
+    white-space: nowrap;
+}
+
+.parant-row-two-social-medias {
+    // white-space: nowrap;
+}
+
+.row-one-social-medias {
+    display: inline-block;
+    justify-content: space-between;
+    padding: 25px;
+    // overflow: hidden;
+    animation: 4s slide infinite linear;
+}
+
+.row-two-social-medias {
+    display: inline-block;
+    justify-content: space-between;
+    // padding: 25px;
+    // overflow: hidden;
+    animation: 3s slideTwoRow infinite linear;
+    // white-space: nowrap;
+
+}
+
+.social-icon-image-row-one {
+    margin-right: 45px;
+}
+
+.get-started-fifth-creation-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.get-started-fifth-creation-btn {
+    background: #770cf1 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    width: 120px;
+    border-radius: 8px;
+}
+
+.get-started-fifth-creation-btn:hover {
+    background: linear-gradient(78.51deg, #770CF1 6.54%, #FE0C0C 99.12%) !important;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideTwoRow {
+    to {
+        transform: translateX(0);
+    }
+
+    from {
+        transform: translateX(-100%);
+    }
+}
+
+// @keyframes slideTwoRow {
+//     from {
+//         transform: translateX(0);
+//     }
+
+//     to {
+//         transform: translateX(100%);
+//     }
+// }
+
+
+
+@media only screen and (max-width: 768px) {
+    .show-social-media-icons-list {
+        background: rgba(0, 0, 0, 0.06);
+        width: auto;
+        /* margin: 35px 260px; */
+        gap: 20px;
+        margin: 20px 15px;
+    }
+
+    .animated-container {
+        display: none;
+    }
+
+    .our-integration-heading {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-container-brand {
+        padding: 0 15px;
+    }
+
+    .our-integration-heading {
+        font-size: 16px;
+    }
+
+    .sub-text-description {
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        width: 330px;
+        padding-top: 10px;
+    }
+
+}

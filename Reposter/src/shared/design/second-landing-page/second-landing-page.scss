@@ -1,0 +1,702 @@
+
+
+
+
+
+
+
+
+.background-p-img {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.column {
+    flex: 1;
+    position: relative;
+    color: white;
+
+}
+
+.column-state-one {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.column-text-first-section {
+    position: relative;
+    color: white;
+    width: 65%;
+
+}
+
+// .column-text {
+//     // flex: 1.5;
+//     position: relative;
+//     color: white;
+
+// }
+
+.texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.text-on-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.heading-one-s-landing {
+    display: flex;
+    // align-items: center;
+    font-size: 70px;
+}
+
+
+.card-section-child-heading {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+// .chagne-color-heading-landing {
+//     color: #FFEAA7;
+//     margin: 0 5px
+// }
+
+.compain-color-heading {
+    color: #FE9121;
+    margin: 0 5px
+}
+
+.color-heading-landing-fontsize {
+    font-size: 35px;
+}
+
+.icon-h-landing {
+    padding-bottom: 10px;
+}
+
+
+
+
+.videos-container-based-on-text {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.main-heading-brand-landing-state {
+    margin-top: 25px;
+    font-size: 35px;
+    color: #000;
+    display: flex;
+}
+
+.main-second-heading-brand-landing-state {
+    margin: 5px 0;
+    font-size: 35px;
+    color: #000;
+}
+
+.main-landing-page-container {
+    /* background: #F1F1F1; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+
+.img-person-b {
+    // width: 100%;
+    /* height: 305px; */
+    /* object-fit: contain; */
+    object-fit: cover;
+    height: 580px;
+    max-width: 100%;
+}
+
+// .img-person-b {
+//     width: 65%;
+//     /* height: 305px; */
+//     /* object-fit: contain; */
+//     object-fit: cover;
+// }
+
+.image-icon-container {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.image-icon {
+    position: absolute;
+}
+
+
+
+// .div-count-one {
+//     right: 150px;
+//     bottom: 200px;
+//     width: 200px;
+//     transform: rotate(1deg);
+//     /* Set the rotation angle you want */
+//     border: 2px solid #FFFFFF4D;
+//     background: linear-gradient(155.14deg, rgba(252, 255, 117, 0) -2.13%, rgba(255, 255, 255, 0.15) 136.58%),
+//         linear-gradient(151.65deg, rgba(255, 255, 255, 0.3) -6.81%, rgba(255, 255, 255, 0) 106.92%);
+//     border-radius: 10px;
+//     filter: blur(0.5px);
+// }
+
+
+
+.state-heading-b {
+    font-size: 38px;
+}
+
+.marginB {
+    margin: 10px 0 45px 0;
+}
+
+
+.heading-below-img {
+    width: 135px;
+    padding: 0 0 10px 10px;
+}
+
+.column-img-container {
+    // flex: 1;
+    position: relative;
+    color: white;
+    width: 35%;
+}
+
+
+.brnad-social-medias-section-heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    font-size: 35px;
+    color: #fff
+}
+
+.brnad-social-medias-section-sub-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: #fff
+}
+
+.brand-reposter-social-medias-section-heading {
+    font-size: 35px;
+}
+
+.reposter-heading-below-img {
+    width: 135px;
+}
+
+
+
+.brnad-social-medias-section-get-started {
+    position: absolute;
+    top: 370px;
+    right: 150px;
+}
+
+
+
+.add-space {
+    padding: 10px 0 0 25px;
+}
+
+.add-margin {
+    margin: 30px 0;
+}
+
+
+
+
+
+.say-good-heading {
+    padding: 0 25px;
+}
+
+.state-img-section {
+    margin: 10px 0 25px 0;
+}
+
+.sub-heading-state-landing-campaign {
+    display: flex;
+    flex-direction: column;
+    // padding-left: 69px;
+}
+
+
+.compain-color-heading-landing {
+    padding-left: 15px;
+}
+
+
+
+//animations
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.initially-hidden {
+    opacity: 0;
+}
+
+.main-first-container-brand {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // gap: 135px;
+    padding: 0 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .heading-one-s-landing {
+        font-size: 41px;
+    }
+
+    .explore-btn {
+        width: 110px !important;
+        border-radius: 35px !important;
+        height: auto !important;
+    }
+
+    .preorder-btn {
+        width: 110px !important;
+        border-radius: 35px !important;
+    }
+
+    .interactive-demo-heading {
+        font-size: 32px;
+        width: 100%;
+        margin: 50px auto 10px auto;
+    }
+
+    // .revenue-container {
+    //     display: block;
+    //     width: 90%;
+    //     margin: 20px 20px;
+    // }
+
+    .image-icon-container {
+        display: none;
+    }
+
+    .background-p-img {
+        width: auto;
+    }
+
+    .average-secrion-img {
+        width: 200px;
+    }
+
+    .brand-landing-first-section {
+        // margin: 50px 0;
+        // padding-left: 140px;
+    }
+
+    .mention-arrow-icon {
+        width: 25px;
+        margin: 0px 105px;
+    }
+
+    .white-below-img {
+        width: 120px;
+    }
+
+    .first-section-landing-desription {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .color-heading-landing-fontsize {
+        font-size: 22px;
+    }
+
+    .achived-img {
+        width: 100px;
+    }
+
+    .card-container-list {
+        width: 300px;
+    }
+
+    .column-img-container {
+        flex: 0;
+    }
+
+    .brnad-social-medias-section-heading {
+        font-size: 20px;
+
+    }
+
+    .brnad-reposter-social-medias-section-heading {
+        font-size: 20px;
+    }
+
+    .brand-reposter-social-medias-section-heading {
+        font-size: 20px;
+    }
+
+    .brnad-social-medias-section-sub-heading {
+        font-size: 20px;
+    }
+
+    .reposter-heading-below-img {
+        width: 90px;
+    }
+
+    .brnad-social-medias-images-section {
+        display: block;
+    }
+
+    .brnad-social-medias-backgoround-img-section {
+        margin: 20px 20px;
+        width: 90%
+    }
+
+    .add-space {
+        padding: 25px 25px 0 75px;
+        font-size: 30px;
+    }
+
+    .img-tumb {
+        width: 95%;
+        // margin-left: 70px;
+    }
+
+    .tranck-container {
+        padding: 10px 90px;
+    }
+
+    .forward-arrow-icon {
+        display: none !important;
+    }
+
+    .back-arrow-icon {
+        display: none !important;
+    }
+
+    .card-brand-landing {
+        height: 200px !important;
+    }
+
+
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column-text,
+    .column {
+        flex: none;
+        width: 100%;
+    }
+
+    .demo-n-short-heading {
+        color: rgb(255, 255, 255);
+        display: flex;
+        font-size: 35px;
+        padding: 50px 40px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .heading-one-s-landing {
+        font-size: 30px;
+    }
+
+    .brand-landing-first-section {
+        margin: 25px 0;
+        padding-left: 50px;
+    }
+
+    
+
+    .state-heading-b {
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+
+    .heading-below-img {
+        width: 105px;
+    }
+
+    .color-heading-landing-fontsize {
+        font-size: 15px;
+    }
+
+    .achived-img {
+        width: 65px;
+    }
+
+    .white-color {
+        font-size: 10px;
+
+    }
+
+    .average-secrion-img {
+        width: 150px;
+    }
+
+    .marginB {
+        font-size: 15px;
+    }
+
+    .brand-reposter-social-medias-section-heading {
+        font-size: 15px;
+    }
+
+    .brnad-social-medias-section-sub-heading {
+        font-size: 15px;
+    }
+
+    .reposter-heading-below-img {
+        width: 65px;
+    }
+
+    .brnad-social-medias-section-heading {
+        font-size: 15px;
+    }
+
+    .brnad-social-medias-section-get-started {
+        position: absolute;
+        top: 445px;
+        right: 110px;
+    }
+
+    .brand-landing-page-btn {
+        padding: 3px !important;
+        width: 100px !important;
+    }
+
+    .add-space {
+        width: 90%;
+        padding: 0 0 0 75px;
+        width: 80%;
+    }
+
+    .main-second-heading-brand-landing-state {
+        padding-top: 15px;
+    }
+
+    .forward-arrow-icon {
+        display: none !important;
+    }
+
+    .back-arrow-icon {
+        display: none !important;
+    }
+
+    .card-brand-landing {
+        width: 390px;
+    }
+
+    .tranck-container {
+        padding: 5px 0 0 65px;
+        font-size: 9px;
+    }
+
+    .state-heading-b {
+        font-size: 15px;
+    }
+
+    .heading-below-img {
+        width: 65px;
+    }
+
+    .img-tumb {
+        width: 95%
+    }
+
+    .extra-maargin-img-state {
+        margin-left: 85px;
+    }
+
+    .card-brand-landing {
+        height: 150px !important;
+        width: 325px !important;
+    }
+
+    .card-container-list {
+        width: 192px;
+        margin: 10px 0;
+    }
+
+    .explore-btn {
+        width: 125px !important;
+        height: 40px !important;
+    }
+
+    .preorder-btn {
+        width: 125px !important;
+        height: 40px !important;
+    }
+
+    .mention-arrow-icon {
+        margin: 0px 110px;
+    }
+
+    .first-section-landing-desription {
+        font-size: 20px;
+    }
+
+    .tranck-container-title {
+        padding-top: 7px;
+    }
+
+    .yellow-icon-div {
+        width: 30px;
+    }
+
+    .tranck-container-title-space {
+        padding-bottom: 40px;
+    }
+
+    .image-space {
+        padding-bottom: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column-text,
+    .column {
+        flex: none;
+        /* Reset flex property */
+        width: 100%;
+        /* Make both columns take 100% width */
+    }
+
+    .interactive-demo-heading {
+        font-size: 25px;
+        width: 100%;
+        margin: 20px auto 10px auto;
+        justify-content: center;
+        display: flex;
+    }
+
+
+
+    .demo-n-short-heading {
+        font-size: 20px;
+        padding: 50px 35px;
+
+    }
+
+    .main-landing-page-container {
+        overflow-x: auto;
+    }
+
+    .compain-color-heading {
+        color: #FE9121;
+        margin: 0 0;
+    }
+
+    .brand-landing-page-video-btn {
+        margin: 0 31px !important;
+        width: 105px;
+    }
+
+    .say-good-heading {
+        padding: 5px 75px;
+        font-size: 14px;
+    }
+
+    
+
+    
+
+    // .column-state-one {
+    //     flex: 1;
+    //     width: 100%;
+    //     // margin-bottom: 10px;
+    //     padding: 10px 0;
+    // }
+
+    .stream-line-section {
+        padding-top: 30px;
+    }
+
+    .sub-heading-state-landing-campaign {
+        padding-left: 55px;
+    }
+
+    .card-title-b {
+        text-align: start !important;
+        font-size: 20px !important;
+    }
+
+    .card-brand-landing-page-container {
+        padding: 0 25px;
+    }
+
+    .card-brand-landing-content {
+        font-size: 10px !important;
+    }
+
+    .card-description-b {
+        font-size: 12px !important;
+    }
+
+    .achived-img {
+        width: 40px !important;
+    }
+
+    .column-text-first-section {
+        width: 100%;
+
+    }
+
+    .brand-landing-first-section {
+        margin: 85px 0;
+        padding-left: 0;
+    }
+
+    .main-first-container-brand {
+        padding: 0 25px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .brnad-social-medias-section-get-started {
+        position: absolute;
+        top: 405px;
+        right: 110px;
+    }
+
+}
