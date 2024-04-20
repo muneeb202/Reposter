@@ -71,17 +71,14 @@ import Pricing from './shared/design/website-landing-page/otherpages/Pricing';
 // import section6 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 // import section7 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 
-
 const App = () => {
   const [currentView, setCurrentView] = useState('brand');
   const [isHeaderOpen, setIsHeaderOpen] = useState(false);
-
 
   const handleViewChange = (view) => {
     setIsHeaderOpen(false)
     setCurrentView(view);
   }
-
 
   return (
     <>
