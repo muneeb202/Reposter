@@ -6,6 +6,9 @@ const { dbConfig } = require('./config');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
+// Routes
+const userRoute = require('./routes/userRoutes')
+
 const app = express();
 const port = 3001;
 
@@ -16,15 +19,13 @@ app.use(cors())
 // const pool = mysql.createPool(dbConfig);
 
 // Loading models
-const User = require('./models/userModel');
-
 sequelize.sync().then(() => {
     console.log('All models were synchronized successfully.');
-  }).catch((error) => {
+}).catch((error) => {
     console.error('Unable to synchronize models:', error);
-  });
-const userRoute = require('./routes/user')
+});
 
+// Loading Routes
 app.use("/user", userRoute)
 
 app.listen(port, () => {

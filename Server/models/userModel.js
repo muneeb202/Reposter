@@ -7,36 +7,47 @@ const User = sequelize.define('User', {
     primaryKey: true,
     autoIncrement: true
   },
-  username: {
+  firstName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  lastName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  emailAddress: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true
   },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true
+  phoneNumber: {
+    type: DataTypes.STRING
+  },
+  brandName: {
+    type: DataTypes.STRING
+  },
+  companyName: {
+    type: DataTypes.STRING
+  },
+  location: {
+    type: DataTypes.STRING
+  },
+  marketingBudget: {
+    type: DataTypes.STRING
+  },
+  goal: {
+    type: DataTypes.STRING
   },
   password: {
     type: DataTypes.STRING,
     allowNull: false
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
   }
 }, {
   tableName: 'users',
   timestamps: false,
-  underscored: true,
-  indexes: [
-    {
-      unique: true,
-      fields: ['email', 'username']
-    }
-  ]
+  underscored: true
 });
 
-User.sync();
+// User.sync()
 
 module.exports = User;
