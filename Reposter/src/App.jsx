@@ -61,6 +61,8 @@ import ContactUs from './shared/design/website-landing-page/otherpages/ContactUs
 import PrivacyPolicy from './shared/design/website-landing-page/otherpages/PrivacyPolicy';
 import Footer from './shared/design/website-landing-page/landing-footer/landing-footer.design';
 import Pricing from './shared/design/website-landing-page/otherpages/Pricing';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import section1 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 // import section2 from "./shared/design/website-landing-page/brands/second-section-brand-landing-design/second-section-brand-landing.design"
 // import section3 from "./shared/design/website-landing-page/brands/third-section-brand-landing-design/third-section-brand-landing.design"
@@ -82,12 +84,21 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <Router>
         <HeaderDesign />
         <LandingHeaderDesign onSelectView={handleViewChange} currentView={currentView}
           isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen}
         />
-        {currentView === 'brand' && <MainBrandLandingPage />}
+        {/* {currentView === 'brand' && <MainBrandLandingPage />} */}
         {currentView === 'talent' && <MainCreatorsLandingPage />}
         {currentView === 'privacy' && <PrivacyPolicy />}
         {currentView === 'contactus' && <ContactUs />}
@@ -96,7 +107,7 @@ const App = () => {
           {/* <Route path="/" element={<LandingPageDesign />} />
           <Route path="/brand/landing/page" element={<SecondLandingPageDesign />} /> */}
           <Route path="/signup/*" element={<SignupDesignComponent />} />
-          <Route path="/signin" element={<SigninDesignComponent />} />
+          <Route path="/" element={<SigninDesignComponent />} />
           {/** admin section routes */}
           <Route path="/admin/brand/profile" element={<AdminBrandProfilePages />} />
           <Route path="/admin/order/management" element={<AdminOrderManagementPage />} />
@@ -159,7 +170,7 @@ const App = () => {
 
         </Routes>
         <Footer onSelectView={handleViewChange} currentView={currentView}
-          isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen}/>
+          isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen} />
       </Router>
     </>
   )

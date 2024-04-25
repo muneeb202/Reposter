@@ -1,7 +1,7 @@
 .jobs-list {
     border: 2px solid #770cf1;
     border-radius: 10px;
-    margin-top: 7px;
+    margin-top: 12px;
     cursor: pointer;
     width: 325px;
 }
@@ -48,6 +48,7 @@
 
 .project-verified-section {
     display: flex;
+    align-items: center;
 }
 
 .verified-icon {
@@ -58,7 +59,9 @@
 .project-verify-tag {
     padding-left: 5px;
     width: 79px;
-
+    margin: 0;
+    font-size: 9px;
+    font-weight: 400;
 }
 
 .proposal-count {
@@ -66,6 +69,7 @@
     color: #838383;
     // width: 90px;
     font-size: 10px;
+    margin: 0;
 }
 
 

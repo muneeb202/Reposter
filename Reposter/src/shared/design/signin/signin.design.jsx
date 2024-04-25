@@ -14,11 +14,14 @@ import GoogleIcon from '@mui/icons-material/Google';
 import EmailIcon from '@mui/icons-material/Email';
 import { useState } from "react";
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import { ThreeDots } from 'react-loader-spinner';
 
 const SigninDesignComponent = () => {
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = React.useState(false);
+    const [loading, setLoading] = useState(false);
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -32,8 +35,9 @@ const SigninDesignComponent = () => {
         setPassword(event.target.value);
     };
 
-    const handleSubmit = async () => {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true)
         try {
             const response = await axios.post('http://localhost:3001/user/login', { emailAddress, password });
             localStorage.setItem('token', response.data.token)
@@ -41,11 +45,14 @@ const SigninDesignComponent = () => {
             if (response.status === 200) {
                 console.log('Login successful');
             } else {
+                toast.error('Invalid email or password')
                 console.error('Failed to login user');
             }
         } catch (error) {
+            toast.error('Invalid email or password')
             console.error('Error registering user:', error);
         }
+        setLoading(false)
     };
 
     return (
@@ -102,7 +109,12 @@ const SigninDesignComponent = () => {
                         </div>
                         <div className='form-data'>
                             <div className="login-btn-div">
-                                <materialModules.Button type="submit" className="login-btn" onClick={handleSubmit}>Login</materialModules.Button>
+                                <materialModules.Button type="submit" className="login-btn" onClick={handleSubmit}>
+                                {loading ? 
+                                <ThreeDots height='100%' color='white' visible={loading}/>
+                                :
+                                'Login'}
+                                </materialModules.Button>
                             </div>
                         </div>
                         <div className='form-data'>
@@ -131,7 +143,9 @@ const SigninDesignComponent = () => {
                     </form>
                 </div>
                 <div className="col-6-signup">
-                    <img src={sideRight} className="side-img" />
+                    <div className="right-img-container">
+                        <img src={sideRight} className="side-img" />
+                    </div>
                 </div>
             </div>
 

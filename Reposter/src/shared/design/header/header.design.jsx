@@ -46,7 +46,7 @@ const HeaderDesign = () => {
             {
                 matches ? <>
                     {
-                        location.pathname !== "/" && location.pathname !== "/brand/landing/page" &&
+                        location.pathname !== "/" && location.pathname !== "/signup" && location.pathname !== "/brand/landing/page" &&
                         <div className="header">
                             <img src={mainLogo} alt="" className="main-website-logo" onClick={() => handleHomePageRouting("/")} />
                             {location.pathname !== "/signup" && location.pathname !== "/signin" &&

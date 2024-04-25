@@ -5,6 +5,23 @@ import creatorImg from "@/assets/creator-img.png";
 import reposterImg from "@/assets/resposter-img.png";
 import JobChildDesign from '../../job-child/job-child.design';
 import { useNavigate } from 'react-router-dom';
+import { Button, ThemeProvider, createTheme } from '@mui/material';
+
+const theme = createTheme({
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#770cf1',
+        },
+        secondary: {
+            main: '#8331D6',
+        },
+        red: { main: '#FF5733' }
+    },
+    typography: {
+        fontFamily: 'Lato, sans-serif',
+    }
+});
 
 const ApplicantDesign = () => {
     const navigate = useNavigate();
@@ -73,7 +90,7 @@ const ApplicantDesign = () => {
      * @param {*} path 
      */
     const handleNewPostRouting = (path) => {
-        navigate(`/${path}`)
+        navigate(`/brand/${path}`)
     }
 
     return (
@@ -87,10 +104,7 @@ const ApplicantDesign = () => {
                     <div className='applicant-or-post-job-d-flex'>
                         <h2 className="heading space-a">Applicants</h2>
                         <h4 className="heading space-a" onClick={() => handleNewPostRouting('job-posting')}
-                            style={{
-                                cursor: "pointer",
-                                textDecoration: "underline"
-                            }}
+                            
                         >Post new job</h4>
 
                     </div>
@@ -102,7 +116,7 @@ const ApplicantDesign = () => {
                                         <div className='cr-data-list'>
                                             <img src={creator?.creatorImage} alt="" className="creator-reposter-img" />
                                             <div className='applicat-data'>
-                                                <h3 className="heading-color user-name">{creator?.creatorName}</h3>
+                                                <h5 className="heading-color user-name">{creator?.creatorName}</h5>
                                                 <h4>{creator?.jobTitle}</h4>
                                                 <h6>{creator?.level}</h6>
                                             </div>
@@ -114,7 +128,9 @@ const ApplicantDesign = () => {
                                         </div>
                                     </div>
                                     <div className='btn-views-appli'>
-                                        <materialModules.Button className="btn-views">View Proposal</materialModules.Button>
+                                        <ThemeProvider theme={theme}>
+                                            <Button variant='contained' color='primary' className="btn-views">View Proposal</Button>
+                                        </ThemeProvider>
                                     </div>
                                 </div>
                             );

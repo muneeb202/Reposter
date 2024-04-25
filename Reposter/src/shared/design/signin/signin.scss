@@ -13,15 +13,15 @@
 }
 
 .signup-heading {
-    width: 100%;
-    height: 36px;
-    top: 146px;
-    left: 228px;
-    justify-content: center;
-    display: flex;
+    text-align: center;
+    margin: 50px 0;
     color: #770CF1;
-    ;
+}
 
+.right-img-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .form-data {

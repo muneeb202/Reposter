@@ -42,7 +42,7 @@ const LandingHeaderDesign = ({ onSelectView, currentView, isHeaderOpen, setIsHea
                 matches ?
                     <>
                         {
-                            location.pathname === "/" &&
+                            (location.pathname === "/" || location.pathname === "/signup") &&
                             <header>
                                 <div className="main-header-landing-container">
                                     <div className="containter-first-side-header">
@@ -76,8 +76,8 @@ const LandingHeaderDesign = ({ onSelectView, currentView, isHeaderOpen, setIsHea
 
                                             }
                                         </div>
-                                        <materialModules.Button className="new-signup-btn2">Sign Up</materialModules.Button>
-                                        <materialModules.Button className="new-login-btn2">Log In</materialModules.Button>
+                                        <materialModules.Button onClick={() => navigate('/signup')} className="new-signup-btn2">Sign Up</materialModules.Button>
+                                        <materialModules.Button onClick={() => navigate('/')} className="new-login-btn2">Log In</materialModules.Button>
                                     </div>
                                 </div>
                             </header >
