@@ -10,6 +10,7 @@ import hidePassword from "@/assets/hide-password.png";
 import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from 'react';
 import axios from 'axios';
+import { useGoogleLogin } from '@react-oauth/google';
 
 const SignupDesignComponent = () => {
     const [showPassword, setShowPassword] = React.useState(false);
@@ -34,9 +35,13 @@ const SignupDesignComponent = () => {
         }));
     };
 
+    const handleTogglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/user/add', formData);
+            const response = await axios.post('http://localhost:3001/user/register', formData);
             localStorage.setItem('token', response.data.token)
             if (response.status === 201) {
                 console.log('User registration successful');
@@ -48,8 +53,26 @@ const SignupDesignComponent = () => {
         }
     };
 
-    const handleTogglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
+    const googleLogin = useGoogleLogin({
+        onSuccess: async (codeResponse) => {
+            try {
+                console.log(codeResponse)
+                const response = await axios.post(`http://localhost:3001/user/auth/google`, {
+                    user: codeResponse
+                });
+                const { token } = response.data;
+                localStorage.setItem('accessToken', token);
+                console.log("Token\n", token, " Message:\n", response.data.message)
+            } catch (error) {
+                console.log('Login Error:', error);
+            }
+        },
+        onError: (error) => console.log('Login Failed:', error),
+        scope: ['openid'],
+    });
+
+    const handleGoogleLogin = () => {
+        googleLogin();
     };
 
     return (
@@ -234,7 +257,7 @@ const SignupDesignComponent = () => {
                             <div className='google-btn'>
                                 <materialModules.Button className='google-btn'
                                 startIcon={<GoogleIcon />}
-
+                                onClick={handleGoogleLogin}
                                 >Google</materialModules.Button>
                             </div>
                         </div>
