@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 // Routes
-const userRoute = require('./routes/userRoutes')
+const userRoute = require('./routes/brandRoutes')
 
 const app = express();
 const port = 3001;
@@ -26,7 +26,7 @@ sequelize.sync().then(() => {
 });
 
 // Loading Routes
-app.use("/user", userRoute)
+app.use("/brand", userRoute)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

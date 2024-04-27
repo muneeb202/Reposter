@@ -16,12 +16,14 @@ import { useState } from "react";
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { ThreeDots } from 'react-loader-spinner';
+import { useNavigate } from 'react-router-dom';
 
 const SigninDesignComponent = () => {
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = React.useState(false);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -39,11 +41,12 @@ const SigninDesignComponent = () => {
         e.preventDefault();
         setLoading(true)
         try {
-            const response = await axios.post('http://localhost:3001/user/login', { emailAddress, password });
+            const response = await axios.post('http://localhost:3001/brand/login', { emailAddress, password });
             localStorage.setItem('token', response.data.token)
             console.log(localStorage.getItem('token'))
             if (response.status === 200) {
                 console.log('Login successful');
+                navigate('/brand/applicant');
             } else {
                 toast.error('Invalid email or password')
                 console.error('Failed to login user');

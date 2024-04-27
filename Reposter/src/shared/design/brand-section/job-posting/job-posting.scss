@@ -3,9 +3,19 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 33%;
-
 }
 
+.job-posting-container {
+    margin: 20px 0 !important;
+
+    label {
+        margin-bottom: 8px;
+    }
+}
+
+.MuiAutocomplete-listbox li {
+    font-size: small;
+}
 .form-data-job-posting {
     justify-content: center;
     display: flex;
@@ -27,15 +37,16 @@
 
 .text-field-design-job-posting {
     width: 400px !important;
-    border: 3px solid #770CF1;
+    border: 2px solid #770CF1;
     height: 40px;
     border-radius: 10px;
     margin-top: 3px;
+    padding: 0px 10px;
 }
 
 .text-field-design-job-posting-skill {
     width: 400px !important;
-    border: 3px solid #770CF1;
+    border: 2px solid #770CF1;
     height: 40px;
     border-radius: 10px;
     margin-top: 3px;
@@ -72,9 +83,9 @@ a {
 }
 
 .btn-one {
-    border: 3px solid #770cf1;
+    border: 2px solid #770cf1;
     border-radius: 30px;
-    width: 100px;
+    width: 92px;
     gap: 20px;
     color: #770CF1 !important;
     text-transform: capitalize !important;
@@ -84,13 +95,14 @@ a {
 
 .skill-tag-group {
     display: flex;
-    gap: 3px;
+    gap: 8px;
     flex-wrap: wrap;
     width: 430px;
+    margin-bottom: 20px;
 }
 
 .btn-select-file {
-    border: 3px solid #770cf1;
+    border: 2px solid #770cf1;
     border-radius: 10px;
     color: #770CF1 !important;
     text-transform: capitalize !important;
@@ -137,11 +149,7 @@ a {
     border: 2px solid #770cf1 !important;
     border-radius: 10px !important;
     width: 400px !important;
-}
-
-.text-field-design-description::placeholder {
-    padding: 15px 5px;
-
+    padding: 10px;
 }
 
 text-field-design-description:focus {
@@ -154,42 +162,30 @@ text-field-design-description:focus {
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:hover {
-    border: 2px solid #770cf1 !important;
     border-radius: 0 !important;
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:focus {
-    border: 2px solid #770cf1 !important;
     border-radius: 0 !important;
 
 }
 
 .sample-required-section {
-    border: 3px solid #770cf1;
+    border: 2px solid #770cf1;
     border-radius: 10px;
     display: flex;
     align-items: center;
     width: 400px;
     margin-top: 10px;
-}
-
-.swich-class {
-    justify-content: end;
+    padding: 10px 20px;
+    justify-content: space-between;
 }
 
 .heading-of-sample {
     display: flex;
-    width: 100%;
     justify-content: center;
     color: #770cf1 !important;
 
-}
-
-.swich-class {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    color: #770cf1 !important;
 }
 
 .skill-add-icon {

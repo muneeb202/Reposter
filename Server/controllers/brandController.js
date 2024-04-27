@@ -1,22 +1,22 @@
-const User = require('../models/userModel')
+const Brand = require('../models/brandModel')
 const bcrypt = require('bcrypt');
 const jwtToken = require('../jwtToken');
 
 const get = (req, res) => {
-    res.send("User page")
+    res.send("Brand page")
 }
 
 const addUser = async (req, res) => {
     try {
         const { firstName, lastName, emailAddress, phoneNumber, brandName, companyName, location, marketingBudget, goal, password } = req.body;
 
-        const existingUser = await User.findOne({ where: { emailAddress } });
+        const existingUser = await Brand.findOne({ where: { emailAddress } });
         if (existingUser) {
-            return res.status(400).json({ error: 'User with this email already exists.' });
+            return res.status(400).json({ error: 'Brand with this email already exists.' });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = await User.create({
+        const newUser = await Brand.create({
             firstName,
             lastName,
             emailAddress,

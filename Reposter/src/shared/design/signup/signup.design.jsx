@@ -13,9 +13,11 @@ import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { MenuItem } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const SignupDesignComponent = () => {
     const [showPassword, setShowPassword] = React.useState(false);
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -47,10 +49,11 @@ const SignupDesignComponent = () => {
         }
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:3001/user/add', formData);
+            const response = await axios.post('http://localhost:3001/brand/add', formData);
             localStorage.setItem('token', response.data.token)
             if (response.status === 201) {
                 console.log('User registration successful');
+                navigate('/brand/applicant')
             } else {
                 toast.error('Email already exists')
                 console.error('Failed to register user');
