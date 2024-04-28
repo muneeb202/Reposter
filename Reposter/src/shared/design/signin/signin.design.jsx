@@ -34,7 +34,9 @@ const SigninDesignComponent = () => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3001/user/login', { emailAddress, password });
-            localStorage.setItem('token', response.data.token)
+            const { token, existingUser } = response.data;
+            localStorage.setItem('accessToken', token);
+            localStorage.setItem('user', existingUser);
             if (response.status === 200) {
                 console.log('Login successful');
             } else {
@@ -52,8 +54,9 @@ const SigninDesignComponent = () => {
                 const response = await axios.post(`http://localhost:3001/user/auth/google`, {
                     user: codeResponse
                 });
-                const { token } = response.data;
+                const { token, existingUser } = response.data;
                 localStorage.setItem('accessToken', token);
+                localStorage.setItem('user', existingUser);
                 console.log("Token\n", token, " Message:\n", response.data.message)
             } catch (error) {
                 console.log('Login Error:', error);

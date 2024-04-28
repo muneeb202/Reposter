@@ -4,7 +4,7 @@ const jwtToken = require('../jwtToken');
 const axios = require('axios');
 const GOOGLE_SIGN_IN_PWD = 'Google_Sign_In_$58291&#10_($)231'
 
-const addUser = async (req, res) => {
+exports.addUser = async (req, res) => {
     try {
         const { firstName, lastName, emailAddress, phoneNumber, brandName, companyName, location, marketingBudget, goal, password } = req.body;
 
@@ -29,14 +29,14 @@ const addUser = async (req, res) => {
 
         const token = jwtToken.genToken(newUser.id)
 
-        return res.status(201).json({ token, message: 'Registration successful'});
+        return res.status(201).json({ token, newUser, message: 'Registration successful'});
     } catch (error) {
         console.error('Error inserting user:', error);
         return res.status(500).json({ error: 'Internal server error' });
     }
 };
 
-const loginUser = async (req, res) => {
+exports.loginUser = async (req, res) => {
     try {
         const { emailAddress, password } = req.body;
         const existingUser = await User.findOne({ where: { emailAddress } });
@@ -53,7 +53,7 @@ const loginUser = async (req, res) => {
             if (isPasswordMatch) {
                 const token = jwtToken.genToken(existingUser.id)
 
-                return res.status(200).json({ token, message: 'Login successful' });
+                return res.status(200).json({ token, existingUser, message: 'Login successful' });
             } else {
                 return res.status(401).json({ error: 'Incorrect email or password' });
             }
@@ -66,7 +66,7 @@ const loginUser = async (req, res) => {
     }
 }
 
-const googleLogin = async (req, res) => {
+exports.googleLogin = async (req, res) => {
     accessToken = req.body.user.access_token
     try {
         const url = "https://www.googleapis.com/oauth2/v1/userinfo";
@@ -82,19 +82,20 @@ const googleLogin = async (req, res) => {
             
             const token = jwtToken.genToken(existingUser.id)
 
-            return res.status(200).json({ token, message: 'Login successful' });
+            return res.status(200).json({ token, existingUser, message: 'Login successful' });
         } else {
             const hashedPassword = await bcrypt.hash(GOOGLE_SIGN_IN_PWD, 10);
             const newUser = await User.create({
                 firstName : response.data.given_name,
                 lastName: response.data.family_name,
                 emailAddress: response.data.email,
-                password: hashedPassword
+                password: hashedPassword,
+                profilePic: response.data.picture
             });
-    
+            
             const token = jwtToken.genToken(newUser.id)
     
-            return res.status(201).json({ token, message: 'Registration successful'});
+            return res.status(201).json({ token, newUser, message: 'Registration successful'});
         }
     } catch (error) {
         console.error('Error fetching user info:', error);
@@ -102,8 +103,8 @@ const googleLogin = async (req, res) => {
     }
 }
 
-module.exports = {
-    addUser : addUser,
-    loginUser : loginUser,
-    googleLogin: googleLogin
-}
+// module.exports = {
+//     addUser : addUser,
+//     loginUser : loginUser,
+//     googleLogin: googleLogin
+// }

@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 // Routes
-const userRoute = require('./routes/userRoutes')
+const userRoute = require('./routes/userRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 
 const app = express();
 const port = 3001;
@@ -15,8 +16,6 @@ const port = 3001;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors())
-
-// const pool = mysql.createPool(dbConfig);
 
 // Loading models
 sequelize.sync().then(() => {
@@ -26,7 +25,8 @@ sequelize.sync().then(() => {
 });
 
 // Loading Routes
-app.use("/user", userRoute)
+app.use('/user', userRoute)
+app.use('/chatapi', chatRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
