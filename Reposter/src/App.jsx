@@ -71,6 +71,8 @@ import Pricing from './shared/design/website-landing-page/otherpages/Pricing';
 // import section6 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 // import section7 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 const App = () => {
   const [currentView, setCurrentView] = useState('brand');
   const [isHeaderOpen, setIsHeaderOpen] = useState(false);
@@ -95,8 +97,8 @@ const App = () => {
         <Routes>
           {/* <Route path="/" element={<LandingPageDesign />} />
           <Route path="/brand/landing/page" element={<SecondLandingPageDesign />} /> */}
-          <Route path="/signup/*" element={<SignupDesignComponent />} />
-          <Route path="/signin" element={<SigninDesignComponent />} />
+          <Route path="/signup/*" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SignupDesignComponent /></GoogleOAuthProvider>} />
+          <Route path="/signin" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SigninDesignComponent /></GoogleOAuthProvider>} />
           {/** admin section routes */}
           <Route path="/admin/brand/profile" element={<AdminBrandProfilePages />} />
           <Route path="/admin/order/management" element={<AdminOrderManagementPage />} />

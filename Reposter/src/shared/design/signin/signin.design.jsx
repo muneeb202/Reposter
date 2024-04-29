@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './signin.scss';
 import stockFive from "@/assets/stock-five.png";
 import * as materialModules from "@/shared/modules/material";
 import HeaderDesign from '../header/header.design';
 import sideRight from "@/assets/side-right.jpg";
 import hidePassword from "@/assets/hide-password.png";
-// import Visibility from '@mui/icons-material/icons/Visibility';
-// import VisibilityOff from '@mui/icons-material/icons/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import LockIcon from '@mui/icons-material/Lock';
 import GoogleIcon from '@mui/icons-material/Google';
 import EmailIcon from '@mui/icons-material/Email';
-import { useState } from "react";
 import axios from 'axios';
+import { useGoogleLogin } from '@react-oauth/google';
 
 const SigninDesignComponent = () => {
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = React.useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -32,12 +30,13 @@ const SigninDesignComponent = () => {
         setPassword(event.target.value);
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3001/user/login', { emailAddress, password });
-            localStorage.setItem('token', response.data.token)
-            console.log(localStorage.getItem('token'))
+            const { token, existingUser } = response.data;
+            localStorage.setItem('accessToken', token);
+            localStorage.setItem('user', existingUser);
             if (response.status === 200) {
                 console.log('Login successful');
             } else {
@@ -46,6 +45,29 @@ const SigninDesignComponent = () => {
         } catch (error) {
             console.error('Error registering user:', error);
         }
+    };
+
+    const googleLogin = useGoogleLogin({
+        onSuccess: async (codeResponse) => {
+            try {
+                console.log(codeResponse)
+                const response = await axios.post(`http://localhost:3001/user/auth/google`, {
+                    user: codeResponse
+                });
+                const { token, existingUser } = response.data;
+                localStorage.setItem('accessToken', token);
+                localStorage.setItem('user', existingUser);
+                console.log("Token\n", token, " Message:\n", response.data.message)
+            } catch (error) {
+                console.log('Login Error:', error);
+            }
+        },
+        onError: (error) => console.log('Login Failed:', error),
+        scope: ['openid'],
+    });
+
+    const handleGoogleLogin = () => {
+        googleLogin();
     };
 
     return (
@@ -115,6 +137,7 @@ const SigninDesignComponent = () => {
                                 <materialModules.Button 
                                 className='google-btn'
                                 startIcon={<GoogleIcon />}
+                                onClick={handleGoogleLogin}
                                 >Google</materialModules.Button>
                             </div>
                         </div>
@@ -134,11 +157,8 @@ const SigninDesignComponent = () => {
                     <img src={sideRight} className="side-img" />
                 </div>
             </div>
-
         </div>
-
-
     )
 }
 
-export default SigninDesignComponent
+export default SigninDesignComponent;
