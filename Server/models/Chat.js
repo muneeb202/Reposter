@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
-const User = require('./userModel');
+const User = require('./User');
 
 const Chat = sequelize.define('Chat', {
   id: {
@@ -8,7 +8,19 @@ const Chat = sequelize.define('Chat', {
     primaryKey: true,
     autoIncrement: true
   },
-  userId1: {
+  problemSubject: {
+    type: DataTypes.STRING
+  },
+  problemDescription: {
+    type: DataTypes.STRING
+  },
+  uploadFile: {
+    type: DataTypes.STRING
+  },
+  status: {
+    type: DataTypes.INTEGER
+  },
+  userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {

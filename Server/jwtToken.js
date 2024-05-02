@@ -7,6 +7,8 @@ const genToken = (id) => {
 }
 
 const verifyToken = (req, res, next) => {
+    console.log("JWT: ", req.body)
+    // console.log("JWT: ", req.files)
     const token = req.headers.authorization;
     if (!token) {
         return res.status(401).json({ error: 'Token not provided' });
@@ -22,6 +24,6 @@ const verifyToken = (req, res, next) => {
 };
 
 module.exports = {
-    genToken : genToken,
-    verifyToken : verifyToken
+    genToken,
+    verifyToken
 }

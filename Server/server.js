@@ -1,8 +1,6 @@
 const express = require('express');
-const mysql = require('mysql2');
 const sequelize = require('./database');
 const cors = require('cors');
-const { dbConfig } = require('./config');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
