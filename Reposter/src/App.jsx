@@ -126,7 +126,7 @@ const App = () => {
           {/* <Route path="/" element={<LandingPageDesign />} />
           <Route path="/brand/landing/page" element={<SecondLandingPageDesign />} /> */}
           <Route path="/signup/*" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SignupDesignComponent /></GoogleOAuthProvider>} />
-          <Route path="/signin" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SigninDesignComponent /></GoogleOAuthProvider>} />
+          <Route path="/" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SigninDesignComponent /></GoogleOAuthProvider>} />
           {/** admin section routes */}
           <Route path="/admin/brand/profile" element={<AdminBrandProfilePages />} />
           <Route path="/admin/order/management" element={<AdminOrderManagementPage />} />

@@ -2,12 +2,12 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config({ path: '.env.development' });
 
 const genToken = (id) => {
-    const token = jwt.sign({ userId: id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: id }, process.env.JWT_SECRET, { expiresIn: '12h' });
     return token;
 }
 
 const verifyToken = (req, res, next) => {
-    console.log("JWT: ", req.body)
+    // console.log("JWT: ", req.headers.authorization)
     // console.log("JWT: ", req.files)
     const token = req.headers.authorization;
     if (!token) {

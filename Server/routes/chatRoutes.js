@@ -6,5 +6,6 @@ const { verifyToken } = require('../jwtToken');
 router.post('/create', verifyToken, chatController.createChat)
 router.get('/messages', verifyToken, chatController.getChatMessages);
 router.post('/messages', verifyToken, chatController.sendMessage);
+router.post('/upload', verifyToken, chatController.uploadFiles);
 
 module.exports = router;

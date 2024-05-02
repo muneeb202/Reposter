@@ -67,6 +67,7 @@ const SigninDesignComponent = () => {
                 const { token, existingUser } = response.data;
                 localStorage.setItem('accessToken', token);
                 localStorage.setItem('user', existingUser);
+                navigate('/brand/applicant')
                 console.log("Token\n", token, " Message:\n", response.data.message)
             } catch (error) {
                 console.log('Login Error:', error);

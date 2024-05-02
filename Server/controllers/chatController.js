@@ -7,7 +7,7 @@ const path = require('path');
 // Set storage engine for multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '/');
+        cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + '-' + file.originalname);
@@ -20,8 +20,9 @@ const upload = multer({
     limits: { fileSize: 1000000 }, // 1MB
     fileFilter: function (req, file, cb) {
         checkFileType(file, cb);
+        console.log(file);
     }
-}).array('uploadFile', 5); // Allow multiple files with field name 'uploadFile'
+}).array('uploadFile'); // Allow multiple files with field name 'uploadFile'
 
 // Check file type
 function checkFileType(file, cb) {
@@ -54,24 +55,25 @@ const createChat = async (req, res) => {
 
                     const problemSubject = formData.problemSubject;
                     const problemDescription = formData.problemDescription;
-                    const selectedFiles = formData.uploadFile.split(",");
                     const userId = req.userId;
-
-                    console.log(selectedFiles)
                     
-                    const uploadFiles = selectedFiles.map(file => file.path); // Get file paths
-                    
+                    const uploadFiles = req.files; // Get file paths
+                    let filenames = '';
+                    uploadFiles.forEach((file) => {
+                        filenames += file.filename + ' : ';
+                    });
+                    console.log(filenames)
                     // Create the chat
                     const newChat = await Chat.create({
                         problemSubject,
                         problemDescription,
-                        uploadFiles: JSON.stringify(uploadFiles), // Store file paths as JSON array
+                        uploadFile: filenames, // Store file paths as JSON array
                         userId,
                         status: 0 // Set status to 'Pending'
                     }, { transaction });
 
                     await transaction.commit();
-
+                    // console.log(req.files)
                     res.status(201).json(newChat);
                 } catch (error) {
                     if (transaction) await transaction.rollback();
@@ -80,12 +82,38 @@ const createChat = async (req, res) => {
                 }
             }
         });
+        // console.log(req.files)
     } catch (error) {
         if (transaction) await transaction.rollback();
         console.error('Error creating chat:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+const uploadFiles = async (req, res) => {
+    upload(req, res, async function (err) {
+        if (err instanceof multer.MulterError) {
+            console.log('inside');
+            // A Multer error occurred when uploading.
+            res.status(500).send({ error: { message: `Multer uploading error: ${err.message}` } }).end();
+            return;
+        } else if (err) {
+            // An unknown error occurred when uploading.
+            if (err.name == 'ExtensionError') {
+                res.status(413).send({ error: { message: err.message } }).end();
+            } else {
+                res.status(500).send({ error: { message: `unknown uploading error: ${err.message}` } }).end();
+            }
+            return;
+        }
+        console.log('file : ', req.files)
+        console.log(req.body)
+        // Everything went fine.
+        // show file `req.files`
+        // show body `req.body`
+        res.status(200).end('Your files uploaded.');
+    })
+}
 
 // Send a message in a chat
 const sendMessage = async (req, res) => {
@@ -135,5 +163,6 @@ const getChatMessages = async (req, res) => {
 module.exports = {
     createChat,
     sendMessage,
-    getChatMessages
+    getChatMessages,
+    uploadFiles
 };

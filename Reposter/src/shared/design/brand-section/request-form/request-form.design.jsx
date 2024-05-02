@@ -9,7 +9,7 @@ import axios from 'axios';
 const RequestFormDesign = () => {
     const [problemSubject, setProblemSubject] = useState('');
     const [problemDescription, setProblemDescription] = useState('');
-    const [selectedFiles, setSelectedFiles] = useState(Array.from({ length: 14 }, () => ''));
+    const [selectedFiles, setSelectedFiles] = useState([]);
 
     const handleFileChange = (e) => {
         const files = Array.from(e.target.files);
@@ -22,24 +22,22 @@ const RequestFormDesign = () => {
             }
         });
 
-        setSelectedFiles(updatedSelectedFiles);
+        setSelectedFiles([...selectedFiles, ...files]);
     };
 
     const handleSubmit = async () => {
         try {
+            console.log(selectedFiles)
             const formData = new FormData();
             formData.append('problemSubject', problemSubject);
             formData.append('problemDescription', problemDescription);
-            formData.append('uploadFile', selectedFiles);
-            // selectedFiles.forEach((file, index) => {
-            //     if (file) {
-            //         formData.append(`uploadFile${index}`, file);
-            //     }
-            // });
+            for (let index = 0; index < selectedFiles.length; index++) {
+                const element = selectedFiles[index];
+                formData.append('uploadFile', element);
+            }
 
             const response = await axios.post('http://localhost:3001/chatapi/create', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
                     Authorization: `${localStorage.getItem('accessToken')}`
                 }
             });
