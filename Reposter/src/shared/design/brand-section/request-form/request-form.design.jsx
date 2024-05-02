@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as materialModules from "@/shared/modules/material";
 import "./request-form.scss";
 import AddIcon from '@mui/icons-material/Add';
@@ -48,6 +48,19 @@ const RequestFormDesign = () => {
         }
     };
 
+    const deleteImage = (indexToRemove) => {
+        setSelectedFiles(prevSelectedFiles => {
+            // Filter out the file to be removed based on its index
+            const updatedFiles = prevSelectedFiles.filter((_, index) => index !== indexToRemove);
+            return updatedFiles;
+        });
+    };
+    
+
+    useEffect(() => {
+        console.log(selectedFiles)
+    }, [selectedFiles]);
+
     return (
         <>
             <div className="flex-container-request-form">
@@ -56,7 +69,7 @@ const RequestFormDesign = () => {
                 </div>
                 <div className="col-8-request-form">
                     <h2 className="heading responsive-heading">Upload Request</h2>
-
+                    <br />
                     <div className='upload-form-data'>
                         <div className="upload-form-input">
                             <materialModules.Label htmlFor="problemSubject" className="label-class">Problem Subject</materialModules.Label>
@@ -78,29 +91,38 @@ const RequestFormDesign = () => {
                         </div>
                         <div className="upload-form-input">
                             <materialModules.Label htmlFor="uploadFile" className="label-class">Upload file</materialModules.Label>
+                            <div className='btn-upload-file-request-form'>
+                                <materialModules.Button onClick={() => document.getElementById('uploadFile').click()} className='btn-upload-file-request-form'
+                                    startIcon={<AddIcon className="add-file-icon" />}
+                                ><h3 className="upload-heading">File</h3></materialModules.Button>
+                            </div>
                             <input
                                 id="uploadFile"
                                 type="file"
                                 multiple
+                                hidden
                                 className="text-field-design-input"
                                 onChange={handleFileChange}
                             />
                         </div>
                         <div className="upload-and-select-img">
-                            <div className="selected-img-request-form">
+                            
                                 {selectedFiles.map((image, index) => (
-                                    <img
-                                        key={index}
-                                        src={image || emptyImg}
-                                        alt={`Image ${index + 1}`}
-                                        className="current-selected-img"
-                                    />
+                                    <div className="selected-img-request-form">
+                                        <i onClick={() => deleteImage(index)} className="fa-solid fa-xmark"></i>
+                                        <img
+                                            key={index}
+                                            src={URL.createObjectURL(image) || emptyImg}
+                                            alt={`Image ${index + 1}`}
+                                            className="current-selected-img"
+                                        />
+                                        <p>{image.name}</p>
+                                    </div>
                                 ))}
-                            </div>
                         </div>
                         <div className="submit-div">
                             <materialModules.Button className="btn-buy-now" onClick={handleSubmit}>Submit</materialModules.Button>
-                        </div>
+                        </div><br />
                     </div>
                 </div>
             </div>

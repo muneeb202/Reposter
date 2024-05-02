@@ -27,35 +27,48 @@
 
 .chat-support-list-section {
     overflow-y: auto;
+    height: 60vh;
+    padding-right: 50px;
 }
 
-.chatsupportlist {
+.support-message {
     display: flex;
     // margin-bottom: 10px;
     margin: 10px 0;
     // flex-direction: column;
-
 } 
+
+.user-message {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 
 
 .single-message-sender-text-container {
     border: 2px solid #F5F5F5;
     background: #F5F5F5;
-    border-radius: 15px 15px 15px 4px;
+    border-radius: 15px 15px 4px 15px;
     margin-left: 10px;
-    width: 75%;
+    max-width: 500px;
 }
 
 .single-message-reciever-text-container {
     display: flex;
+    border-radius: 15px 15px 15px 4px;
+    background-color: #FFECEF;
     justify-content: end;
-    width: 90%;
+    max-width: 500px;
+    margin-right: 10px;
+
+    .single-message-text {
+        color: #DF1525;
+    }
 }
 
 .single-message-text {
+    font-size: 14px;
     margin: 15px;
-    color: #000000;
 }
 
 .time-container {
@@ -64,6 +77,8 @@
 
 .time-text {
     color: #757575;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 .receiver-text {
@@ -102,10 +117,12 @@
 }
 
 .icon-div {
-    position: absolute !important;
-    top: 20px;
-    right: 30px;
-    display: inline-flex;
+    // position: absolute !important;
+    // top: 20px;
+    // right: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 .icon {
@@ -136,6 +153,11 @@
     position: relative;
     margin-bottom: 20px;
     margin-top: 30px;
+
+    div, fieldset {
+        border: none !important;
+        outline: none !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
