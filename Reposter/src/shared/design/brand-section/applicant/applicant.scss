@@ -8,6 +8,7 @@
 
 .col-6-appicant {
     flex: 0 1 15%;
+    margin-right: 30px;
 }
 
 .col-8-appicant {
@@ -31,7 +32,7 @@
 .applicat-list {
     border: 3px solid #770cf1;
     border-radius: 25px;
-    width: 300px;
+    width: 400px;
     height: 200px;
 }
 
@@ -48,13 +49,13 @@
 
 .applicat-data {
     display: flex;
-    margin-left: 10px;
+    margin-left: 25px;
     flex-direction: column;
 }
 
 .applicat-state {
     display: flex;
-    text-align: center;
+    justify-content: space-evenly;
     gap: 20px;
     margin: 15px;
     padding-top: 10px;
@@ -82,14 +83,31 @@
     background: #770cf1 !important;
     color: #fff !important;
     text-transform: capitalize !important;
+    font-family: var(--font-family) !important;
+    padding: 5px 30px !important;
 }
 
-.applicat-list:hover .user-name {
-    color: #fff
+.applicat-list {
+    h5 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    h6 {
+        font-size: 12px;
+        font-weight: 400;
+    }
 }
 
-.applicat-list:hover .applicant-p {
-    color: #fff
+.applicat-list:hover {
+    .applicant-p, h4, h5, h6  {
+        color: #fff
+    }
 }
 
 .btn-views-appli {
@@ -101,7 +119,18 @@
 .applicant-or-post-job-d-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 85%;
+
+    h4 {
+        cursor: pointer;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    h4:hover {
+        text-decoration: underline;
+    }
 }
 
 

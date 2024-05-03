@@ -20,7 +20,11 @@ const HeaderDesign = () => {
         setOpen(!open)
     }
 
+    console.log(location)
 
+    const isActive = (path) => {
+        return location.pathname === path ? 'active' : '';
+    };
 
     /**
     * naviagation for header
@@ -46,17 +50,17 @@ const HeaderDesign = () => {
             {
                 matches ? <>
                     {
-                        location.pathname !== "/" && location.pathname !== "/brand/landing/page" &&
+                        location.pathname !== "/" && location.pathname !== "/signup" && location.pathname !== "/brand/landing/page" &&
                         <div className="header">
                             <img src={mainLogo} alt="" className="main-website-logo" onClick={() => handleHomePageRouting("/")} />
                             {location.pathname !== "/signup" && location.pathname !== "/signin" &&
                                 <>
                                     <nav className="navbar">
-                                        <a className="nav-item" onClick={() => handleSidebarRouting("applicant")}>Jobs</a>
-                                        <a className="nav-item" onClick={() => handleSidebarRouting("talent-hunt")}>Talent</a>
-                                        <a className="nav-item" onClick={() => handleSidebarRouting("reports")}>Report</a>
-                                        <a className="nav-item" onClick={() => handleSidebarRouting("chat")}>Messages</a>
-                                        <a className="nav-item" onClick={() => handleSidebarRouting("dashboard")}>Dashboard</a>
+                                        <a className={`nav-item ${isActive('/brand/applicant')}`} onClick={() => handleSidebarRouting("applicant")}>Jobs</a>
+                                        <a className={`nav-item ${isActive('/brand/talent-hunt')}`} onClick={() => handleSidebarRouting("talent-hunt")}>Talent</a>
+                                        <a className={`nav-item ${isActive('/brand/reports')}`} onClick={() => handleSidebarRouting("reports")}>Report</a>
+                                        <a className={`nav-item ${isActive('/brand/chat')}`} onClick={() => handleSidebarRouting("chat")}>Messages</a>
+                                        <a className={`nav-item ${isActive('/brand/dashboard')}`} onClick={() => handleSidebarRouting("dashboard")}>Dashboard</a>
                                     </nav>
                                     <div className='logo-nav'>
                                         <SettingsIcon className='logo-design' />
@@ -90,11 +94,11 @@ const HeaderDesign = () => {
                                             {location.pathname !== "/signup" && location.pathname !== "/signin" &&
                                                 <>
                                                     <nav className="navbar">
-                                                        <a className="nav-item" onClick={() => handleSidebarRouting("applicant")}>Jobs</a>
-                                                        <a className="nav-item" onClick={() => handleSidebarRouting("talent-hunt")}>Talent</a>
-                                                        <a className="nav-item" onClick={() => handleSidebarRouting("reports")}>Report</a>
-                                                        <a className="nav-item" onClick={() => handleSidebarRouting("chat")}>Messages</a>
-                                                        <a className="nav-item" onClick={() => handleSidebarRouting("dashboard")}>Dashboard</a>
+                                                        <a className={`nav-item ${isActive()}`} onClick={() => handleSidebarRouting("applicant")}>Jobs</a>
+                                                        <a className={`nav-item ${isActive()}`} onClick={() => handleSidebarRouting("talent-hunt")}>Talent</a>
+                                                        <a className={`nav-item ${isActive()}`} onClick={() => handleSidebarRouting("reports")}>Report</a>
+                                                        <a className={`nav-item ${isActive()}`} onClick={() => handleSidebarRouting("chat")}>Messages</a>
+                                                        <a className={`nav-item ${isActive()}`} onClick={() => handleSidebarRouting("dashboard")}>Dashboard</a>
                                                     </nav>
                                                     <div className='logo-nav'>
                                                         <SettingsIcon className='logo-design' />

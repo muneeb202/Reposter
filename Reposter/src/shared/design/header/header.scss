@@ -28,7 +28,7 @@ nav {
     cursor: pointer;
 }
 
-.nav-item:hover {
+.nav-item:hover, .nav-item.active {
     color: #770cf1 !important;
 }
 

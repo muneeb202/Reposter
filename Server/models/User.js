@@ -41,14 +41,13 @@ const User = sequelize.define('User', {
   password: {
     type: DataTypes.STRING,
     allowNull: false
-  },
-  profilePic: {
-    type: DataTypes.STRING
-  },
+  }
 }, {
   tableName: 'users',
   timestamps: false,
   underscored: true
 });
+
+// User.sync()
 
 module.exports = User;

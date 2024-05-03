@@ -128,16 +128,20 @@
 }
 
 .textarea-message-textarea {
-    width: 100%;
     border-radius: 15px 15px 0 0;
     box-sizing: border-box;
-    padding-right: 120px;
-    padding-top: 15px;
-}
-.textarea-message-textarea::placeholder {
-    padding: 5px 10px;
+    border-color: white;
+    border: none;
+    outline: none;
+    // padding-right: 120px;
+    flex: 1;
+    // padding-top: 15px;
+    padding: 10px;
 }
 
+.textarea-message-textarea:focus-visible {
+    // border-color: white;
+}
 .messages-data-detail {
     margin-left: 10px;
 }

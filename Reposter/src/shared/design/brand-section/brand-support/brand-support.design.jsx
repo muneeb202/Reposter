@@ -10,11 +10,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
 // import { IconButton } from '@mui/core';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { useNavigate } from 'react-router-dom';
 const BrandSupportDesign = () => {
     const [isAccordionOpen, setIsAccordionOpen] = useState(false);
     const [expanded, setExpanded] = React.useState(false);
     const [expandedTwo, setExpandedTwo] = React.useState(false);
     const [expandedThree, setExpandedThree] = React.useState(false);
+    const navigate = useNavigate();
 
     const handleAccordionToggle = (panel) => (event, isExpanded) => {
         setIsAccordionOpen(!isAccordionOpen);
@@ -63,7 +65,7 @@ const BrandSupportDesign = () => {
                             <div className="support-options red">
                                 <img src={paymentImg} className="icons-list" />
                                 <h6 className="heading-h5">Questions about</h6>
-                                <h5 className="heading-h6">Payment Meth…</h5>
+                                <h5 className="heading-h6">Payment Method</h5>
                             </div>
                             <div className="support-options purple">
                                 <img src={grpImg} className="icons-list" />
@@ -181,7 +183,7 @@ const BrandSupportDesign = () => {
                                 </div>
                             </div>
                             <div className="next-div">
-                                <materialModules.Button className="btn-buy-now">Next</materialModules.Button>
+                                <materialModules.Button onClick={() => navigate('/brand/request-table')} className="btn-buy-now">Chat Support</materialModules.Button>
                             </div>
                         </div>
                     </div>

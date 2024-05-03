@@ -61,6 +61,9 @@ import ContactUs from './shared/design/website-landing-page/otherpages/ContactUs
 import PrivacyPolicy from './shared/design/website-landing-page/otherpages/PrivacyPolicy';
 import Footer from './shared/design/website-landing-page/landing-footer/landing-footer.design';
 import Pricing from './shared/design/website-landing-page/otherpages/Pricing';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ThemeProvider, createTheme } from '@mui/material';
 // import section1 from "./shared/design/website-landing-page/brands/first-section-brand-landing-design/first-section-brand-landing.design"
 // import section2 from "./shared/design/website-landing-page/brands/second-section-brand-landing-design/second-section-brand-landing.design"
 // import section3 from "./shared/design/website-landing-page/brands/third-section-brand-landing-design/third-section-brand-landing.design"
@@ -73,6 +76,22 @@ import Pricing from './shared/design/website-landing-page/otherpages/Pricing';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+const theme = createTheme({
+  palette: {
+      mode: 'light',
+      primary: {
+          main: '#770cf1',
+      },
+      secondary: {
+          main: '#8331D6',
+      },
+      red: { main: '#FF5733' }
+  },
+  typography: {
+      fontFamily: 'Lato, sans-serif',
+  }
+});
+
 const App = () => {
   const [currentView, setCurrentView] = useState('brand');
   const [isHeaderOpen, setIsHeaderOpen] = useState(false);
@@ -83,13 +102,22 @@ const App = () => {
   }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <Router>
         <HeaderDesign />
         <LandingHeaderDesign onSelectView={handleViewChange} currentView={currentView}
           isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen}
         />
-        {currentView === 'brand' && <MainBrandLandingPage />}
+        {/* {currentView === 'brand' && <MainBrandLandingPage />} */}
         {currentView === 'talent' && <MainCreatorsLandingPage />}
         {currentView === 'privacy' && <PrivacyPolicy />}
         {currentView === 'contactus' && <ContactUs />}
@@ -98,7 +126,7 @@ const App = () => {
           {/* <Route path="/" element={<LandingPageDesign />} />
           <Route path="/brand/landing/page" element={<SecondLandingPageDesign />} /> */}
           <Route path="/signup/*" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SignupDesignComponent /></GoogleOAuthProvider>} />
-          <Route path="/signin" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SigninDesignComponent /></GoogleOAuthProvider>} />
+          <Route path="/" element={<GoogleOAuthProvider clientId="618449538805-mdoaetdp7eg7sspadhk9n6lj6vkalhsp.apps.googleusercontent.com"><SigninDesignComponent /></GoogleOAuthProvider>} />
           {/** admin section routes */}
           <Route path="/admin/brand/profile" element={<AdminBrandProfilePages />} />
           <Route path="/admin/order/management" element={<AdminOrderManagementPage />} />
@@ -130,7 +158,7 @@ const App = () => {
           <Route path="/brand/support" element={<BrandSupportDesign />} />
           <Route path="/brand/request-form" element={<RequestFormDesign />} />
           <Route path="/brand/request-table" element={<RequestTableDesign />} />
-          <Route path="/brand/chatbox" element={<SupportChatboxDesign />} />
+          <Route path="/brand/chatbox/:id" element={<SupportChatboxDesign />} />
           <Route path="/brand/order-processing" element={<OrderProcessingDesign />} />
           <Route path="/brand/payment-method" element={<PaymentMethodsDesign />} />
           <Route path="/brand/payment-detail" element={<PaymentDetailDesign />} />
@@ -161,9 +189,9 @@ const App = () => {
 
         </Routes>
         <Footer onSelectView={handleViewChange} currentView={currentView}
-          isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen}/>
+          isHeaderOpen={isHeaderOpen} setIsHeaderOpen={setIsHeaderOpen} />
       </Router>
-    </>
+    </ThemeProvider>
   )
 }
 export default App

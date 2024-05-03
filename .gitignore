@@ -2,3 +2,5 @@
 /__MACOSX
 /Reposter/node_modules
 /Server/node_modules
+/Server/config.js
+/Server/uploads
