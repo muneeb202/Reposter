@@ -15,7 +15,7 @@ const Chat = sequelize.define('Chat', {
     type: DataTypes.STRING
   },
   uploadFile: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING(1000)
   },
   status: {
     type: DataTypes.INTEGER
@@ -51,7 +51,11 @@ const Message = sequelize.define('Message', {
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
-  }
+  },
+  isUser: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true // Set default value to true
+  },
 }, {
   tableName: 'messages',
   timestamps: false,

@@ -5,11 +5,13 @@ import AddIcon from '@mui/icons-material/Add';
 import emptyImg from "@/assets/empty-img.png";
 import DashboardDesign from '@/shared/design/brand-section/dashboard-b/dashboard.design';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const RequestFormDesign = () => {
     const [problemSubject, setProblemSubject] = useState('');
     const [problemDescription, setProblemDescription] = useState('');
     const [selectedFiles, setSelectedFiles] = useState([]);
+    const navigate = useNavigate();
 
     const handleFileChange = (e) => {
         const files = Array.from(e.target.files);
@@ -43,6 +45,7 @@ const RequestFormDesign = () => {
             });
 
             console.log('Chat created:', response.data);
+            navigate(`/brand/chatbox/${response.data['id']}`)
         } catch (error) {
             console.error('Error creating chat:', error);
         }

@@ -13,6 +13,11 @@
 
 .col-8-brand-support {
     flex: 0 0 65%;
+
+    h2 {
+        font-size: 35px;
+        margin: 20px 10px;
+    }
 }
 
 .search-keyword-container {
@@ -21,6 +26,7 @@
     width: 90%;
     height: 40px;
     margin: 10px;
+    padding: 10px;
 }
 
 .search-keyword {
@@ -58,11 +64,15 @@
 .heading-h5 {
     color: #616161;
     margin: 2px 10px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .heading-h6 {
     color: #000000;
     margin: 2px 10px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .green {
@@ -80,6 +90,7 @@
 .top-question-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 7px;
     width: 90%;
 }
@@ -111,6 +122,8 @@
     align-items: center;
     width: 220px;
     margin-top: 10px;
+    justify-content: space-between;
+    padding: 5px 20px;
 }
 
 .swich-user-list {
@@ -128,10 +141,6 @@
 .main-search-keyword-container{
     position: relative;
 
-}
-
-.search-keyword-container::placeholder{
-    padding: 10px;
 }
 
 @media screen and (max-width: 900px) {

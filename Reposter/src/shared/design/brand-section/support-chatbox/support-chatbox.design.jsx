@@ -8,8 +8,11 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios';
 import { IconButton, TextField } from '@mui/material';
+import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const SupportChatboxDesign = () => {
+
     // const [messages, setMessages] = useState([
     //     {
     //         text: 'Hi Kitsbase, Let me know you need help and you can ask us any questions', isSender: true, timeMessage: "08:21 AM",
@@ -22,6 +25,8 @@ const SupportChatboxDesign = () => {
     //     },
     //     { text: 'How to create a Reposter account?', isSender: false, timeMessage: "08:24 AM" },
     // ]);
+
+    const { id } = useParams();
 
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
@@ -48,6 +53,9 @@ const SupportChatboxDesign = () => {
         try {
             const token = localStorage.getItem('accessToken')
             const response = await axios.get('http://localhost:3001/chatapi/messages', {
+                params: {
+                    chatId : id
+                },
                 headers: {
                     Authorization: token
                 }
@@ -56,6 +64,7 @@ const SupportChatboxDesign = () => {
             setMessages(response.data);
         } catch (error) {
             console.error('Error fetching messages:', error);
+            toast.error('Unauthorised, cannot view this chat')
         }
     };
 
@@ -63,17 +72,23 @@ const SupportChatboxDesign = () => {
         console.log("here")
         try {
             const token = localStorage.getItem('accessToken');
-            const response = await axios.post('http://localhost:3001/chatapi/messages', { text: newMessage }, {
+            const response = await axios.post('http://localhost:3001/chatapi/messages', { text: newMessage, chatId: id, isUser: sender }, {
                 headers: {
                     Authorization: token
                 }
             });
-            setMessages([...messages, {text: newMessage, isSender: sender, timeMessage: formatDate(Date.now())}]);
+            setMessages([...messages, {text: newMessage, isUser: sender, createdAt: formatDate(Date.now())}]);
             setNewMessage('');
             setSender(!sender)
-            fetchMessages();
+            // fetchMessages();
         } catch (error) {
             console.error('Error sending message:', error);
+        }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            sendMessage();
         }
     };
 
@@ -88,21 +103,21 @@ const SupportChatboxDesign = () => {
                     <div className="chat-support-container">
                         <div className='chat-support-list-section'>
                             {messages.map((message, index) => (
-                                <div key={index} className={message.isSender ? 'support-message' : 'user-message'}>
-                                    <img src={message.isSender ? avatarFemale : avatarMale} alt="" className="chat-person-img" />
+                                <div key={index} className={message.isUser ? 'support-message' : 'user-message'}>
+                                    <img src={message.isUser ? avatarFemale : avatarMale} alt="" className="chat-person-img" />
                                     <div>
-                                        <div className={message.isSender ? 'single-message-sender-text-container' : 'single-message-reciever-text-container'}>
+                                        <div className={message.isUser ? 'single-message-sender-text-container' : 'single-message-reciever-text-container'}>
                                             <p className="single-message-text">{message.text}</p>
                                         </div>
                                         <div className="time-container">
-                                            <p className="time-text">{message.timeMessage}</p>
+                                            <p className="time-text">{formatDate(message.createdAt)}</p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="textarea-message-container-s">
-                            <TextField multiline minRows={2} placeholder="Message Here" className="textarea-message-textarea" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}></TextField>
+                            <TextField onKeyDown={handleKeyDown} multiline minRows={2} placeholder="Message Here" className="textarea-message-textarea" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}></TextField>
                             <div className='icon-div'>
                                 <AddCircleIcon className='icon' />
                                 <h4 className='doc'>doc</h4>

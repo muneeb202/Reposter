@@ -90,43 +90,17 @@ const createChat = async (req, res) => {
     }
 };
 
-const uploadFiles = async (req, res) => {
-    upload(req, res, async function (err) {
-        if (err instanceof multer.MulterError) {
-            console.log('inside');
-            // A Multer error occurred when uploading.
-            res.status(500).send({ error: { message: `Multer uploading error: ${err.message}` } }).end();
-            return;
-        } else if (err) {
-            // An unknown error occurred when uploading.
-            if (err.name == 'ExtensionError') {
-                res.status(413).send({ error: { message: err.message } }).end();
-            } else {
-                res.status(500).send({ error: { message: `unknown uploading error: ${err.message}` } }).end();
-            }
-            return;
-        }
-        console.log('file : ', req.files)
-        console.log(req.body)
-        // Everything went fine.
-        // show file `req.files`
-        // show body `req.body`
-        res.status(200).end('Your files uploaded.');
-    })
-}
-
 // Send a message in a chat
 const sendMessage = async (req, res) => {
     let transaction;
     try {
         transaction = await sequelize.transaction();
 
-        const { text } = req.body;
+        const { text, chatId, isUser } = req.body;
         const userId = req.userId;
-        const chatId = req.chatId;
 
         // Create the message
-        const message = await Message.create({ chatId, userId, text }, { transaction });
+        const message = await Message.create({ chatId, userId, isUser, text }, { transaction });
 
         await transaction.commit();
 
@@ -142,7 +116,8 @@ const sendMessage = async (req, res) => {
 const getChatMessages = async (req, res) => {
     try {
         const userId = req.userId;
-        const chatId = req.params.chatId;
+        const chatId = req.query.chatId;
+        console.log(chatId, userId)
 
         // Check if the user is authorized to access the chat
         const chat = await Chat.findByPk(chatId);
@@ -160,9 +135,22 @@ const getChatMessages = async (req, res) => {
     }
 };
 
+const getChats = async (req, res) => {
+    try {
+        const userId = req.userId;
+
+        const chats = await Chat.findAll({ where: { userId } });
+
+        res.status(200).json(chats);
+    } catch (error) {
+        console.error('Error fetching user chats:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
 module.exports = {
     createChat,
     sendMessage,
     getChatMessages,
-    uploadFiles
+    getChats
 };

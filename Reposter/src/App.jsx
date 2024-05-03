@@ -158,7 +158,7 @@ const App = () => {
           <Route path="/brand/support" element={<BrandSupportDesign />} />
           <Route path="/brand/request-form" element={<RequestFormDesign />} />
           <Route path="/brand/request-table" element={<RequestTableDesign />} />
-          <Route path="/brand/chatbox" element={<SupportChatboxDesign />} />
+          <Route path="/brand/chatbox/:id" element={<SupportChatboxDesign />} />
           <Route path="/brand/order-processing" element={<OrderProcessingDesign />} />
           <Route path="/brand/payment-method" element={<PaymentMethodsDesign />} />
           <Route path="/brand/payment-detail" element={<PaymentDetailDesign />} />
