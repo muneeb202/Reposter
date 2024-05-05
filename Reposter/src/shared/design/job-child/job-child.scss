@@ -111,6 +111,11 @@
     margin-bottom: 27px;
 }
 
+.job-child-container {
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
 @media (max-width: 768px) {
     .main-jobs-list {
         width: 100%;
