@@ -8,6 +8,7 @@ import imgTwo from "@/assets/img-two.png";
 import imgThree from "@/assets/img-three.png";
 import imgFour from "@/assets/img-four.png";
 import { Autocomplete, TextField } from '@mui/material';
+import axios from 'axios';
 
 const JobPostingDesign = () => {
     const skills = [
@@ -52,6 +53,7 @@ const JobPostingDesign = () => {
 
     const handleSkillChange = (event, newValue) => {
         setSelectedSkills(newValue);
+        console.log(selectedSkills)
     };
 
     const handleFileInputChange = (e) => {
@@ -65,6 +67,30 @@ const JobPostingDesign = () => {
     useEffect(() => {
         console.log(selectedFiles, selectedSkills, formData)
     }, [formData, selectedFiles, selectedSkills]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const jobData = new FormData();
+        jobData.append("selectedSkills", selectedSkills);
+        for (const key in formData) {
+            jobData.append(key, formData[key]);
+        }
+        for (const file of selectedFiles) {
+            jobData.append('uploadFile', file);
+        }
+
+        try {
+            const response = await axios.post('http://localhost:3001/job/create', jobData, {
+                headers: {
+                    Authorization: `${localStorage.getItem('accessToken')}`
+                }
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error submitting job posting:', error);
+        }
+    };
 
     // Handler to update form data
     const handleChange = (e) => {
@@ -80,166 +106,169 @@ const JobPostingDesign = () => {
     return (
         <>
             {/* <HeaderDesign /> */}
-            <div className="row job-posting-container">
-                <div className="col-4-job-posting">
-                    <div className='form-data-job-posting'>
-                        <div>
-                            <materialModules.Label htmlFor="title1" className="label-class">Title</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                name='title'
-                                id="title1"
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="requirements1" className="label-class">Contract requirements</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="requirements1"
-                                variant="outlined"
-                                name='contractRequirements'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="title2" className="label-class">Social media content</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="title2"
-                                variant="outlined"
-                                name='socialMediaContent'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="requirements2" className="label-class">Duration</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="requirements2"
-                                variant="outlined"
-                                name='duration'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="requirements2" className="label-class">Price Range</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="requirements2"
-                                variant="outlined"
-                                name='priceRange'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="requirements2" className="label-class">Category</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="requirements2"
-                                name='category'
-                                variant="outlined"
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                        <div>
-                            <materialModules.Label htmlFor="requirements2" className="label-class">Project Size</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="requirements2"
-                                variant="outlined"
-                                name='projectSize'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-4-job-posting">
-                    <div className='form-data-job-posting'>
-                        <div>
-                            <materialModules.Label htmlFor="title1" className="label-class">Description</materialModules.Label>
-                            <textarea
-                                onChange={handleChange}
-                                id="title1"
-                                name='description'
-                                className="text-field-design-description"
-                                multiline
-                                rows={4}
-                                style={{ height: '100%' }}
-                                placeholder="Write a description of a post here"
-                            />
-                        </div>
-
-                    </div>
-                    <div className='sample-required-section'>
-                        <h5 className='heading-of-sample'>Sample Required</h5>
-                        <div className='swich-class'>
-                            <materialModules.Switch name='sampleRequired' onChange={handleChange} defaultChecked color="secondary" className="swich-class" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-4-job-posting-skill">
-                    <div className='form-data-job-posting'>
-                        <div>
-                            <Autocomplete
-                                color='primary'
-                                multiple
-                                id="tags-outlined"
-                                options={skills}
-                                filterSelectedOptions
-                                freeSolo
-                                value={selectedSkills}
-                                onChange={handleSkillChange}
-                                renderInput={(params) => (
-                                    <TextField
-                                        sx={{ border: 'none' }}
-                                        {...params}
-                                        label="Skills"
-                                    />
-                                )}
-                            />
-                        </div>
-
-                    </div>
-                    <div className='form-data-job-posting'>
-                        <div>
-                            <materialModules.Label htmlFor="title1" className="label-class">Employee Requirement (full time, per hour)</materialModules.Label>
-                            <input
-                                onChange={handleChange}
-                                id="title1"
-                                name='employeeRequirement'
-                                className="text-field-design-job-posting"
-                            />
-                        </div>
-                    </div>
-                    <div className='form-data-job-posting'>
-                        <div>
-                            <materialModules.Label htmlFor="title1" className="label-class">Upload required documents and media</materialModules.Label>
-                            <div className='btn-select-file'>
-                                <materialModules.Button className='btn-select-file'
-                                    startIcon={<AddIcon className="add-file-icon-job-posting" />}
-                                    onClick={handleUpload}
-                                >
-                                </materialModules.Button>
+            <form onSubmit={handleSubmit}>
+                <div className="row job-posting-container">
+                    <div className="col-4-job-posting">
+                        <div className='form-data-job-posting'>
+                            <div>
+                                <materialModules.Label htmlFor="title1" className="label-class">Title</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    name='title'
+                                    id="title1"
+                                    className="text-field-design-job-posting"
+                                />
                             </div>
-                            <input
-                                type="file"
-                                id="file-input"
-                                multiple
-                                style={{ display: 'none' }}
-                                onChange={handleFileInputChange}
-                            />
+                            <div>
+                                <materialModules.Label htmlFor="requirements1" className="label-class">Contract requirements</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="requirements1"
+                                    variant="outlined"
+                                    name='contractRequirements'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                            <div>
+                                <materialModules.Label htmlFor="title2" className="label-class">Social media content</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="title2"
+                                    variant="outlined"
+                                    name='socialMediaContent'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                            <div>
+                                <materialModules.Label htmlFor="requirements2" className="label-class">Duration</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="requirements2"
+                                    variant="outlined"
+                                    name='duration'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                            <div>
+                                <materialModules.Label htmlFor="requirements2" className="label-class">Price Range</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="requirements2"
+                                    variant="outlined"
+                                    name='priceRange'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                            <div>
+                                <materialModules.Label htmlFor="requirements2" className="label-class">Category</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="requirements2"
+                                    name='category'
+                                    variant="outlined"
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                            <div>
+                                <materialModules.Label htmlFor="requirements2" className="label-class">Project Size</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="requirements2"
+                                    variant="outlined"
+                                    name='projectSize'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
                         </div>
+                    </div>
+                    <div className="col-4-job-posting">
+                        <div className='form-data-job-posting'>
+                            <div>
+                                <materialModules.Label htmlFor="title1" className="label-class">Description</materialModules.Label>
+                                <textarea
+                                    onChange={handleChange}
+                                    id="title1"
+                                    name='description'
+                                    className="text-field-design-description"
+                                    multiline
+                                    rows={4}
+                                    style={{ height: '100%' }}
+                                    placeholder="Write a description of a post here"
+                                />
+                            </div>
 
-                        {/* <div className="select-img-section">
-                            <img src={imgOne} className='selected-img' alt="" />
-                            <img src={imgTwo} className='selected-img' alt="" />
-                            <img src={imgThree} className='selected-img' alt="" />
-                            <img src={imgFour} className='selected-img' alt="" />
-                        </div> */}
+                        </div>
+                        <div className='sample-required-section'>
+                            <h5 className='heading-of-sample'>Sample Required</h5>
+                            <div className='swich-class'>
+                                <materialModules.Switch name='sampleRequired' onChange={handleChange} defaultChecked color="secondary" className="swich-class" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-4-job-posting-skill">
+                        <div className='form-data-job-posting'>
+                            <div>
+                                <Autocomplete
+                                    color='primary'
+                                    multiple
+                                    id="tags-outlined"
+                                    options={skills}
+                                    filterSelectedOptions
+                                    freeSolo
+                                    value={selectedSkills}
+                                    onChange={handleSkillChange}
+                                    renderInput={(params) => (
+                                        <TextField
+                                            sx={{ border: 'none' }}
+                                            {...params}
+                                            label="Skills"
+                                        />
+                                    )}
+                                />
+                            </div>
+
+                        </div>
+                        <div className='form-data-job-posting'>
+                            <div>
+                                <materialModules.Label htmlFor="title1" className="label-class">Employee Requirement (full time, per hour)</materialModules.Label>
+                                <input
+                                    onChange={handleChange}
+                                    id="title1"
+                                    name='employeeRequirement'
+                                    className="text-field-design-job-posting"
+                                />
+                            </div>
+                        </div>
+                        <div className='form-data-job-posting'>
+                            <div>
+                                <materialModules.Label htmlFor="title1" className="label-class">Upload required documents and media</materialModules.Label>
+                                <div className='btn-select-file'>
+                                    <materialModules.Button className='btn-select-file'
+                                        startIcon={<AddIcon className="add-file-icon-job-posting" />}
+                                        onClick={handleUpload}
+                                    >
+                                    </materialModules.Button>
+                                </div>
+                                <input
+                                    type="file"
+                                    id="file-input"
+                                    multiple
+                                    style={{ display: 'none' }}
+                                    onChange={handleFileInputChange}
+                                />
+                            </div>
+
+                            {/* <div className="select-img-section">
+                                <img src={imgOne} className='selected-img' alt="" />
+                                <img src={imgTwo} className='selected-img' alt="" />
+                                <img src={imgThree} className='selected-img' alt="" />
+                                <img src={imgFour} className='selected-img' alt="" />
+                            </div> */}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+            <button type="submit" className="submit-button" onClick={handleSubmit}>Submit</button>
         </>
     );
 }
