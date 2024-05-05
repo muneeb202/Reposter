@@ -7,7 +7,9 @@ import videoCallIcon from "@/assets/video-call-icon.png";
 import creatorImg from "@/assets/creator-img.png";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import SendIcon from '@mui/icons-material/Send';
+import { IconButton, TextField } from '@mui/material';
 const MessagesDesign = () => {
+    const [newMessage, setNewMessage] = useState('');
     const [creatorList, setCreatorList] = useState([
         {
             'creatorName': "Jennifer",
@@ -86,13 +88,38 @@ const MessagesDesign = () => {
 
         },
     ]);
+
+    const sendMessage = async () => {
+        console.log("here")
+        // try {
+        //     const token = localStorage.getItem('accessToken');
+        //     const response = await axios.post('http://localhost:3001/chatapi/messages', { text: newMessage, chatId: id, isUser: sender }, {
+        //         headers: {
+        //             Authorization: token
+        //         }
+        //     });
+        //     setMessages([...messages, {text: newMessage, isUser: sender, createdAt: formatDate(Date.now())}]);
+        //     setNewMessage('');
+        //     setSender(!sender)
+        //     // fetchMessages();
+        // } catch (error) {
+        //     console.error('Error sending message:', error);
+        // }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            sendMessage();
+        }
+    };
+
     return (
-        <>
+        <div style={{ padding: '20px' }}>
             <div className="messages">
                 <h2 className="heading-color messages-heading">Messages</h2>
             </div>
             <div className="container-messages">
-                <div className="col-4">
+                <div className="">
                     <div className='btn-search'>
                         <materialModules.Button className='btn-search'>Search more</materialModules.Button>
                     </div>
@@ -109,7 +136,6 @@ const MessagesDesign = () => {
                 </div>
                 <div className="col-8">
                     <div>
-
                         <div className='creator-hire-me-div'>
                             <h2 className='heading-color creator-heading'>Jennifer</h2>
                             <materialModules.Button className="btn-hire-now">Hire Now</materialModules.Button>
@@ -143,15 +169,14 @@ const MessagesDesign = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="main-textarea-message-container">
-                                <div className="textarea-message-container">
-                                    <div className='icon-div'>
-                                        <AddCircleIcon className='icon' />
-                                        <h4 className='doc'>doc</h4>
+                            <div className="textarea-message-container-s">
+                                <TextField onKeyDown={handleKeyDown} multiline minRows={2} placeholder="Message Here" className="textarea-message-textarea" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}></TextField>
+                                <div className='icon-div'>
+                                    <AddCircleIcon className='icon' />
+                                    <h4 className='doc'>doc</h4>
+                                    <IconButton onClick={sendMessage}>
                                         <SendIcon className='icon' />
-                                    </div>
-                                    <textarea rows="4" cols="1" placeholder="Message Here" className="textarea-message-textarea">
-                                    </textarea>
+                                    </IconButton>
                                 </div>
                             </div>
 
@@ -159,7 +184,7 @@ const MessagesDesign = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

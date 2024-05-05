@@ -42,7 +42,7 @@ const BrandDashboardDesign = () => {
 
     return (
         <>
-            <div className="flex-container-admin">
+            <div className="flex-container-brand-support">
                 <div className="col-6-admin">
                     <DashboardDesign />
 

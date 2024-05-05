@@ -2,6 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+
+    .col-8 {
+        flex: 1;
+        padding: 20px;
+    }
 }
 
 .col-4 {
@@ -63,21 +68,28 @@
     display: flex;
     margin: 15px 5px 5px 5px;
     height: 100%;
+    border-radius: 20px;
+    transition: background 0.3s ease-in, color 0.3s ease-in;
 }
 
 .creator-list-data:hover {
     background: #770cf1;
-    width: 215px;
-    border-radius: 0 20px 20px 0;
+
+    .creator-name {
+        color: white;
+    }
 }
 
 .creator-profile-img {
-    width: 52px;
-    height: 51px;
+    width: 40px;
+    height: 40px;
 }
 
 .creator-name {
     margin: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05rem;
 }
 
 
