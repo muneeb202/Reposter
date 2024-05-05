@@ -20,8 +20,6 @@ const HeaderDesign = () => {
         setOpen(!open)
     }
 
-    console.log(location)
-
     const isActive = (path) => {
         return location.pathname === path ? 'active' : '';
     };

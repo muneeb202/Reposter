@@ -2,14 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
+    // justify-content: center;
+    padding: 20px;
     flex-direction: row;
-    margin-top: 15px;
+    // margin-top: 15px;
 }
 
 .col-6-admin {
     flex: 0 0 15%;
-    padding: 10px;
+    // padding: 10px;
     // margin: 10px 0 10px 50px;
 }
 
