@@ -33,9 +33,9 @@ const RequestFormDesign = () => {
             const formData = new FormData();
             formData.append('problemSubject', problemSubject);
             formData.append('problemDescription', problemDescription);
-            for (let index = 0; index < selectedFiles.length; index++) {
-                const element = selectedFiles[index];
-                formData.append('uploadFile', element);
+            for (const file of selectedFiles) {
+                console.log(file)
+                formData.append('uploadFile', file);
             }
 
             const response = await axios.post('http://localhost:3001/chatapi/create', formData, {

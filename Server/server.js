@@ -7,6 +7,7 @@ require('dotenv').config();
 // Routes
 const userRoute = require('./routes/userRoutes');
 const chatRoutes = require('./routes/chatRoutes');
+const jobRoutes = require('./routes/jobRoutes');
 
 const app = express();
 const port = 3001;
@@ -25,6 +26,7 @@ sequelize.sync().then(() => {
 // Loading Routes
 app.use('/user', userRoute)
 app.use('/chatapi', chatRoutes);
+app.use('/job', jobRoutes)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

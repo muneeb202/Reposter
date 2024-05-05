@@ -7,7 +7,7 @@ const path = require('path');
 // Set storage engine for multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/');
+        cb(null, 'uploads/requests/');
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + '-' + file.originalname);
@@ -50,7 +50,6 @@ const createChat = async (req, res) => {
                 return res.status(400).json({ error: err });
             } else {
                 try {
-                    // Extract form data from multer
                     const formData = req.body;
 
                     const problemSubject = formData.problemSubject;
